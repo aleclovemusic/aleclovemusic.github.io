@@ -1,0 +1,881 @@
+html {
+  position:relative;
+  min-height:100%;
+  background-color:rgb(22, 22, 22);
+}
+
+body {
+
+	max-width: 1000px;
+	float: none;
+	margin: auto;
+	padding: 0px;
+  color:white;
+  height:4917px;
+  background-color: transparent;
+}
+	body, h1, h2 {
+		font-family: "Cinzel";
+    }
+	body, h1 {
+		font-size: 115px;
+		text-align: center;
+		font-weight: normal;
+	}
+	body, h2 {
+		font-size: 42px;
+		text-align: center;
+		font-weight: normal;
+	}
+	body, h3, h4, h5, h6 {
+		font-family: "Playfair Display", serif;
+	}
+  .title-home {
+    letter-spacing: 12px;
+    position:absolute;
+    bottom:10px;
+    z-index:60;
+  }
+header {
+	width: 100%;
+	display: block;
+	font-family: "Gilroy Light";
+	padding: 0px;
+}
+  .top-bar {
+    min-width:auto;
+    position:fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    z-index: 1000;
+    background-color: black;
+    height: 96px;
+    box-sizing:border-box;
+  }
+main {
+	width: 100%;
+	float: none;
+	display: block;
+	min-height: 720px;
+}
+
+p.copyright {
+   position:absolute;
+   width:100%;
+   bottom:0;
+   text-align:center;
+   font-family: "Times New Roman";
+   font-size: 12px;
+   color: rgb(167, 167, 167);
+}
+
+#page-container {
+  min-height:100%;
+  min-width:100%;
+  display: block;
+}
+
+#content-wrap {
+  padding-bottom: 2.5rem;    /* Footer height */
+}
+
+#footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;            /* Footer height */
+}
+/* Menu CSS */
+.topnav {
+  background-color: black;
+  height:80px;
+  padding: 14px 16px;
+  overflow:visible;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  font-size: 17px;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+.navbar__container {
+    display:flex;
+    justify-content:space-between;
+    height:80px;
+    width:100%;
+    max-width:1175px;
+}
+/* Style the links inside the navigation bar */
+.topnav div div button, div a, a {
+  display: inline-flex;
+  justify-content:space-between;  
+  color: #f2f2f2;
+  align-items: center;
+  justify-content:center;
+  padding: 0px 16px;
+  text-decoration: none;
+  height:100%;
+}
+.dropbtn {
+  background-color:transparent;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  font-family: "Gilroy Light";
+  border: none;
+  cursor: pointer;
+  display:inline-flex;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: transparent;
+  color:#CE2351;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #1b1b1b;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+    background-color:transparent;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: transparent;}
+
+.show {display: block;}
+
+/* Change the color of links on hover */
+.topnav .navbar__container a:hover {
+  background-color: transparent;
+  color: #CE2351;
+}
+
+/* Add an active class to highlight the current page */
+.topnav .navbar__container a.active {
+  background-color: transparent;
+  color: #CE2351;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .navbar__container .icon {
+  display: none;
+}
+
+.banner {
+  display:flex;
+  position:absolute;
+  left:0px;
+  margin-top: 0px;
+  height: 600px;
+  top:96px;
+  width:100%;
+  box-sizing:border-box;
+  overflow:auto;
+  justify-content:center;
+  align-items:center;
+  background: linear-gradient(to left, rgb(22,22,22), black);
+  overflow: hidden;
+}
+.banner-max {
+  position:absolute;
+  overflow:hidden;
+  display:flex;
+  max-width: 1900px;
+  width:80%;
+  justify-content:center;
+  align-items:center;
+  height: 110%;
+  top: -40px;
+}
+  .homephoto {
+    height:750px;
+  }
+  .kiltiemb {
+    width:1130px;
+  }
+  .dci_1 {
+    height:750px;
+  }
+  .dci_2 {
+    height:650px;
+  }
+  .willgrad {
+    height:750px;
+  }
+  .logoplain {
+    position: absolute;
+    left:0%;
+    z-index:50;
+  }
+
+
+.slidertrack {
+  width: 2244px; 
+  height:inherit;
+  transform: translate3d(748px, 0px, 0px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index:1;
+  display:contents;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.autoslider {
+  position:absolute;
+  display:flex;
+  height:inherit;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent;
+  z-index:20;
+  -webkit-mask-image:-webkit-linear-gradient(linear, right, left, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+  mask-image: linear-gradient(to left, rgba(0,0,0,1), rgba(0,0,0,0));
+  overflow:hidden;
+  margin-left:45%;
+}
+
+.staff-grid {
+  display:grid;
+  position: relative;
+  justify-content:space-evenly;
+  top:-550px;
+  grid: 80px 80px 80px 80px / auto;
+  grid-gap:8px;
+  background-color:white;
+  padding:10px;
+  z-index: 1;
+  right:5%;
+  grid-template-columns: 950px;
+}
+.staff-grid div {
+  background-color:rgb(22, 22, 22);
+  z-index: 1;
+  padding: 20px 0;
+  position:relative;
+  left:center -30px;
+  text-align:center;
+}
+
+
+
+/* Home about section*/
+.aboutmain {
+	width: 50%;
+	float: right;
+	display: block;
+	min-height: 300px;
+  max-height:550px;
+  color: white;
+  line-height:1.5;
+  overflow:visible;
+  box-shadow: 1px 1px 25px black;
+  background-color:rgb(43, 43, 43);
+  z-index:90;
+  position:relative;
+  top:730px;
+}
+	.aboutmain p {
+		font-size: 18px;
+		text-align: center;
+		font-family: "Gilroy Light";
+    margin:20px;
+	}
+	.aboutmain ul {
+		font-size: 18px;
+		text-align: left;
+		font-family: "Gilroy Light";
+    margin:20px;
+	}
+
+
+
+  /* Treble Clef */
+  .trebleclef {
+    width: 227px; 
+    height: 646px; 
+    object-fit: cover;
+    background:transparent;
+    transform: rotate(-4deg);
+    z-index:90;
+    position:relative;
+  }
+
+
+
+  /* Portfolio Strip */
+.ptf-bg {
+  min-width: auto;
+  position: absolute;
+  left: 0;
+  top: 1270px;
+  width:100%;
+  background-color: #1B0326;
+  height: 657px;
+  box-sizing: border-box;
+  display: flex;
+  margin-top: 100px;
+  overflow: auto;
+  align-items:center;
+  justify-content:center;
+}
+  .ptfcontainer {
+    box-sizing:inherit;
+    display: flex;
+    max-width: none;
+    align-self: flex-start;
+    align-items: center;
+    justify-content:center;
+    flex-direction:column;
+    height:500px;
+    position:sticky;
+  }
+  .ptftext {
+    top:50px;
+    position:absolute;
+    box-sizing: inherit;
+  }
+  .ptftext h3 i {
+    color:white;
+    font-weight:normal;
+    font-size: 135px;
+  }
+
+
+
+
+/* Buy Strip */
+.buy-bg {
+  min-width: auto;
+  position: absolute;
+  left: 0;
+  top: 2270px;
+  width: 100%;
+  background-color: #212121;
+  height: 657px;
+  box-sizing: border-box;
+  display: flex;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  overflow:visible;
+  align-items:center;
+  justify-content:center;
+  }
+  .buycontainer {
+    box-sizing:border-box;
+    display: flex;
+    width: 1920px;
+    align-self: flex-start;
+    align-items: center;
+    justify-content:center;
+    flex-direction:column;
+    height:657px;
+    position:sticky;
+  }
+  .buytext {
+    width: 1920px;
+    top: 50px;
+    position:absolute;
+    box-sizing: inherit;
+  }
+    .buytext h3 i {
+      width: 1920px;
+      font-size:135px;
+      font-weight: normal;
+    }
+    .buytext h4 {
+      font-size: 24px;
+      font-weight:100;
+      letter-spacing: 16px;
+    }
+
+
+
+
+  /* Videos Strip */
+  .video-bg {
+    min-width: auto;
+    position: absolute;
+    left: 0;
+    top: 3270px;
+    width:100%;
+    background-color: #010542;
+    height: 657px;
+    box-sizing: border-box;
+    display: flex;
+    margin-top: 100px;
+    overflow: visible;
+    align-items:center;
+    justify-content:center;
+  }
+    .videocontainer {
+      box-sizing:inherit;
+      display: flex;
+      max-width: none;
+      align-self: flex-start;
+      align-items: center;
+      justify-content:center;
+      flex-direction:column;
+      height:500px;
+      position:sticky;
+    }
+    .videotext {
+      width: 1920px;
+      top: 50px;
+      position:absolute;
+      box-sizing: inherit;
+    }
+      .videotext h3 i {
+        width: 1920px;
+        font-size:135px;
+        font-weight: normal;
+      }
+
+
+
+/* Contact Strip */
+.contact-bg {
+  min-width: auto;
+  position: absolute;
+  left: 0%;
+  top: 4270px;
+  width:100%;
+  background-image: linear-gradient(#32113b,#961e1e);
+  height: 657px;
+  box-sizing: border-box;
+  display: flex;
+  margin-top: 100px;
+  overflow: auto;
+  align-items:center;
+  justify-content:center;
+}
+  .contactcontainer {
+    box-sizing:inherit;
+    display: flex;
+    max-width: none;
+    align-self:center;
+    align-items: center;
+    justify-content:center;
+    height:90px;
+    position:relative;
+  }
+
+
+
+/*Buttons*/
+.buttonbox-container {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  height:fit-content;
+  margin-top:0px;
+  position: absolute;
+  align-self:flex-start;
+  bottom:40px;
+}
+.twobuttonbox {
+  display:flex;
+  justify-content:space-between;
+  height:90px;
+  align-items:center;
+  box-sizing:border-box;
+  min-width:900px;
+}
+.button {
+  font-family: Cinzel;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 3px;
+  text-shadow: 0px 0px 7px #000000;
+  display: inline-flex;
+  font-size: 20px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  bottom: 100px;
+}
+  .button i {
+    color:transparent;
+    display: inline-flex;
+  }
+  .button:hover i {
+    color:white;
+    animation: infinite;
+    animation-duration: 1s;
+    animation-name: slidein ;
+  }
+  .button div i {
+    width: 100px;
+    height: 100px;
+  }
+  @keyframes slidein {
+    from {left: 0px;}
+    to {left: 50px;}
+  }
+
+.ostbutton {
+  background-image: linear-gradient(rgb(90, 0, 90),rgb(184, 17, 17)); 
+  width:370px;
+  height:100%;
+  align-items:center;
+  justify-content:center;
+  box-shadow: 1px 1px 25px black;
+  display:inline-flex;
+}
+  .ostbutton:hover {
+    background-image: url(https://w0.peakpx.com/wallpaper/856/512/HD-wallpaper-headphones-colors-abstract-music.jpg);
+    background-size: 140%,140%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    color: white;
+    box-shadow: 1px 1px 25px black;
+  }
+
+
+
+.bandbutton {
+  background-image: linear-gradient(rgb(12, 12, 110),rgb(0, 80, 172)); 
+  width: 370px;
+  height: 100%;
+  box-shadow: 1px 1px 25px black;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+  .bandbutton:hover {
+    background-image: url(https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/close-up-of-a-classic-violin-isolated-nmaximova.jpg);
+    background-size: 140%,140%;
+    background-repeat: no-repeat;
+    background-position: 50% 57%;
+    color: white;
+    box-shadow: 1px 1px 25px black;
+  }
+
+
+
+.salebutton {
+		background-image: linear-gradient(black, gray);
+		text-align: center;
+		width: 370px;
+    height:90px;
+		box-shadow: 1px 1px 25px black;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    bottom:50px;
+    position:absolute;
+	}
+	.salebutton:hover {
+		background-image: url(https://images.pexels.com/photos/164821/pexels-photo-164821.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+		background-size: 140%,140%;
+		background-repeat: no-repeat;
+		background-position: 50% 57%;
+		color: white;
+		box-shadow: 1px 1px 25px black;
+	}
+
+  .videobutton {
+		background-image: linear-gradient(rgb(89, 80, 218), rgb(35, 167, 134));
+		text-align: center;
+		width: 370px;
+    height:90px;
+		box-shadow: 1px 1px 25px black;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    position:absolute;
+    bottom:0px;
+	}
+	.videobutton:hover {
+		background-image: url(https://i.pinimg.com/564x/89/75/b0/8975b0011188e7754fff3f696b0ffcb8.jpg);
+		background-size: 140%,140%;
+		background-repeat: no-repeat;
+		background-position: 50% 57%;
+		color: white;
+		box-shadow: 1px 1px 25px black;
+	}
+
+  .contactbutton {
+    background-image: linear-gradient(#30157a,#451852);
+    text-align:center;
+    width: 470px;
+		height: 150px;
+    box-shadow: 1px 1px 25px black;
+    display:inline-flex;
+		font-size: 40px;
+    align-items:center;
+    justify-content:center;
+    position: absolute;
+    bottom:20%;
+	}
+	.contactbutton:hover {
+		background-image: url(https://i.pinimg.com/originals/e3/3e/5d/e33e5de0c7c296a7072e9780fe1beaae.jpg);
+		background-position: 50% 53%;
+		background-size: 190%,190%;
+	}
+  .fa i {
+    display:auto;
+    align-self:center;
+    justify-self:none;
+  }
+
+
+
+
+
+.contact-page {
+  position:absolute;
+  min-height: 500px;
+  justify-content: center;
+  align-items:center;
+  width:100%;
+  background-color: #1B0326;
+  height: 100%;
+  box-sizing: border-box;
+  display: grid;
+  margin-top: 100px;
+  overflow: auto;
+  left:0;
+}
+.contact-title {
+  top:50px;
+  position:absolute;
+  box-sizing: inherit;
+  align-self: center;
+  justify-self: center;
+}
+.contact-title h3 i {
+  color:white;
+  font-weight:normal;
+  font-size: 135px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Videos Page */
+
+.videospage {
+  position:absolute;
+  min-height: 100%;
+  justify-items: center;
+  align-items: center;
+  width:100%;
+  background-image:url(./myimages/20201019_155911.jpg);
+  background-color:rgba(0, 0, 0, 0.459);
+  background-blend-mode:saturation;
+  background-repeat:no-repeat;
+  background-size:100%;
+  background-attachment:fixed;
+  height: auto;
+  box-sizing: border-box;
+  display: grid;
+  margin-top: 100px;
+  overflow: auto;
+  left:0;
+  grid-template-columns: auto;
+}
+.videostitle {
+  top:50px;
+  position:absolute;
+  box-sizing: inherit;
+  align-self: center;
+  justify-self: center;
+}
+.videostitle h2 {
+  color:white;
+  font-weight:normal;
+  font-size: 115px;
+}
+.divider {								/* minor cosmetics */
+  position:absolute;
+  top:250px;
+  display: auto; 
+  font-size: 24px; 
+  text-align: center; 
+  width: 75%; 						/* divider width */
+  margin: 40px auto;					/* spacing above/below */
+}
+.divider span { display: table-cell; position: relative; }
+.divider span:first-child, .divider span:last-child {
+  width: 50%;
+  top: 13px;							/* adjust vertical align */
+  -moz-background-size: 100% 2px; 	/* line width */
+  background-size: 100% 2px; 			/* line width */
+  background-position: 0 0, 0 100%;
+  background-repeat: no-repeat;
+}
+.divider span:first-child {				/* color changes in here */
+  background-image: -webkit-linear-gradient(linear, 0 0, 0 100%, from(transparent), to(rgb(255, 255, 255)));
+  background-image: -webkit-linear-gradient(180deg, transparent, rgb(255, 255, 255));
+  background-image: -moz-linear-gradient(180deg, transparent, rgb(255, 255, 255));
+  background-image: -o-linear-gradient(180deg, transparent, rgb(255, 255, 255));
+  background-image: linear-gradient(90deg, transparent, rgb(255, 255, 255));
+}
+.divider span:nth-child(2) {
+  color: rgba(0, 0, 0, 0); padding: 0px 5px; width: auto; white-space: nowrap;
+}
+.divider span:last-child {				/* color changes in here */
+  background-image: -webkit-linear-gradient(linear, 0 0, 0 100%, from(rgb(255, 255, 255)), to(transparent));
+  background-image: -webkit-linear-gradient(180deg, rgb(255, 255, 255), transparent);
+  background-image: -moz-linear-gradient(180deg, rgb(255, 255, 255), transparent);
+  background-image: -o-linear-gradient(180deg, rgb(255, 255, 255), transparent);
+  background-image: linear-gradient(90deg, rgb(255, 255, 255), transparent);
+}
+.video_box {
+  position:absolute;
+  top:400px;
+  max-width: 1740px;
+  display:grid;
+  grid-template-columns: auto auto auto;
+}
+
+.video_embed {
+  position:auto;
+  padding:10px;
+}
+
+
+
+
+
+
+
+
+/* OST page*/
+
+.ostpage {
+  position:absolute;
+  min-height: 100%;
+  justify-items: center;
+  align-items: center;
+  width:100%;
+  background-image:url(./myimages/pexels-mnm-zameer-3308588.jpg);
+  background-repeat: repeat-y;
+  background-size:100%;
+  height: auto;
+  box-sizing: border-box;
+  display: grid;
+  margin-top: 100px;
+  overflow: visible;
+  left:0;
+  grid-template-columns: auto;
+}
+.osttitle {
+  top:50px;
+  position:absolute;
+  box-sizing: inherit;
+  align-self: center;
+  justify-self: center;
+}
+.osttitle h2 {
+  color:white;
+  font-weight:normal;
+  font-size: 115px;
+}
+.ost_grid {
+  position:absolute;
+  top:400px;
+  max-width: 1740px;
+  display:grid;
+  grid-template-columns:760px 760px;
+  grid-template-rows:760px;
+  column-gap: 80px;
+  width:80%;
+}
+.ost_segment {
+  position:auto;
+  padding:50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Band & Orchestra Page */
+.bandpage {
+  position:absolute;
+  min-height: 100%;
+  justify-items: center;
+  align-items: center;
+  width:100%;
+  background-image:url(./myimages/pexels-eva-elijas-7605539.jpg);
+  background-size:100%;
+  background-repeat:repeat-y;
+  height: auto;
+  box-sizing: border-box;
+  display: grid;
+  margin-top: 100px;
+  overflow: visible;
+  left:0;
+  grid-template-columns: auto;
+}
+.bandtitle {
+  top:50px;
+  position:absolute;
+  box-sizing: inherit;
+  align-self: center;
+  justify-self: center;
+}
+.bandtitle h2 {
+  color:white;
+  font-weight:normal;
+  font-size: 115px;
+}

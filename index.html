@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HOME | AlecLove.com</title>
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div id="page-container">
+        <div id="content-wrap">
+            <header class="top-bar">
+                <!-- Navbar Section-->
+                <nav class="topnav" id="myTopnav">
+                    <div class="navbar__container">
+                        <div class="dropdown">
+                            <button onclick="myPortfolio()" class="dropbtn">PORTFOLIO</button>
+                            <div id="myDropdown" class="dropdown-content">
+                            <a href="ost.html">Original Soundtracks</a>
+                            <a href="bandorchestra.html">Band & Orchestra</a>
+                            </div>
+                        </div>
+                        <a href="videos.html">VIDEOS</a>
+                        <a href="index.html" class="active">HOME</a>
+                        <a href="buyMusic.html">BUY MUSIC</a>
+                        <a href="contact.html">CONTACT</a>
+                        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </div>    
+                </nav>
+            </header>
+
+            <main>
+
+                <div class="banner"> 
+                    <div class="banner-max">
+                        <img class="logoplain" src="./myimages/Logoplain.png" alt="logoplain">
+                        <div class="slidertrack">
+                            <div id="autoslider" class="autoslider">
+                                <div>
+                                <img class="kiltiemb" src="./myimages/Alec 2018 Alma College edit.jpg">
+                                </div>
+                                <div>
+                                <img class="homephoto" src="./myimages/Alec Smile Stratford.jpg">
+                                </div>
+                                <div>
+                                <img class="dci_1" src="./myimages/Alec Dad DCI 2018_2.jpg">
+                                </div>
+                                <div>
+                                <img class="dci_2" src="./myimages/Alec Dad DCI 2018_1.jpg">
+                                </div>
+                                <div>
+                                <img class="willgrad" src="./myimages/Alec Will Grad 2021.jpg">
+                                </div>
+                            </div>
+                        </div>
+                            <!-- Title -->
+                    <div class="title-home">
+                        <h2>Musician, Composer, Producer</h2>
+                    </div>
+                    </div>
+                </div>
+                <div class="aboutmain" id="myAboutmain">
+                    <p>Welcome!</p>
+                    <p>I am an independent composer on a journey from aficionado to connoisseur. On this website, you will find a collection of my previous projects and works, as well as a place to stream royalty-free music that's available for licensing. I have a variety of skill sets in music, such as:</p>
+                    <ul>
+                        <li>Composing original pieces for concert band, marching band, and percussion ensembles;</li>
+                        <li>Scoring for video games and trailers;</li>
+                        <li>Transcribing full ensemble performances and single instruments;</li>
+                        <li>Creating visually appealing and professional-looking music sheets; and</li>
+                        <li>Producing high quality digital audio performances in a number of styles.</li>
+                    </ul>
+                </div>
+
+            </main>
+
+                <!--Treble Clef Animation-->
+                <div class="trebleclef" id="trebleClef">
+                    <img src="https://www.pngkey.com/png/full/13-135165_white-treble-clef-png.png">
+                </div>
+                <div class="staff-grid">
+                    <div class="staff1"></div>
+                    <div class="staff2"></div>
+                    <div class="staff3"></div>
+                    <div class="staff4"></div>
+                </div>
+
+            <!--Portfolio Strip-->
+            <div class="ptf-bg">
+                <div class="ptfcontainer">
+                    <div id="ptfText" class="ptftext" data-testid="richTextElement">
+                        <h3><i>PORTFOLIO</i></h3>
+                    </div>
+                    <div class="buttonbox-container">
+                        <div class="twobuttonbox">
+                            <button class="button ostbutton" onclick=location.href='ost.html'>Original Soundtracks</button>
+                            <button class="button bandbutton" onclick=location.href='bandorchestra.html'>Band & Orchestra</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!--Buy Music Strip-->
+            <div class="buy-bg">
+                <div class="buycontainer">
+                    <div id="buyText" class="buytext" data-testid="richTextElement">
+                        <h3><i>ROYALTY-FREE MUSIC</i></h3>
+                        <h4>FOR FILMMAKERS</h4>
+                    </div>
+                    <div class="buttonbox-container">
+                        <button class="button salebutton" onclick=location.href='buymusic.html'>Browse</button>
+                    </div>
+                </div>
+            </div>
+            <div class="video-bg">
+                <div class="videocontainer">
+                    <div id="videoText" class="videotext" data-testid="richTextElement">
+                        <h3><i>VIDEOS</i></h3>
+                    </div>
+                    <div class="buttonbox-container">
+                        <button class="button videobutton" onclick=location.href='videos.html'>Watch Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-bg">
+                <div class="contactcontainer">
+                    <div class="buttonbox-container">
+                        <button class="button contactbutton" onclick=location.href='contact.html'>Contact Me</button>
+                    </div>
+                </div>
+            </div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+            <script src="https://kit.fontawesome.com/7afaf64a99.js" crossorigin="anonymous"></script>
+            <script src="app.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"></script>    
+            <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+            <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+            <script type="text/javascript" src="slick/slick.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+        </div>
+    </div>
+    <footer id="footer">
+        <p class="copyright" text-align="center">Copyright &copy; 2022 Alec Love</p>
+    </footer>
+    
+</body>
+
+
+</html>
