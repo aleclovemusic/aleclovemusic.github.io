@@ -327,6 +327,51 @@ p.copyright {
 
 
 
+
+  /* Quotes */
+  div .mainquote1 {
+    animation-name:quote1move;
+    animation-duration: 3.5s;
+    animation-iteration-count: 1;
+  }
+  .mainquote1 {
+    position:absolute;
+    display:block;
+    background:transparent;
+    left:35%;
+    top:360px;
+    z-index:100;
+    text-align:left;
+    font-family:"Playfair Display"
+
+  }
+    .mainquote1a {
+      position:auto;
+      display:block;
+      font-size:28px;
+    }
+    .mainquote1b {
+      position:relative;
+      display:block;
+      top:50px;
+      text-indent:100px;
+      font-size:30px;
+    }
+    .mainquote1c {
+      position:relative;
+      display:block;
+      top:100px;
+      font-size:18px;
+      text-indent:200px;
+    }
+    @keyframes quote1move {
+      0%   {left: 36%; color: transparent;}
+      20%  {left: 36%; color: transparent;}
+      100% {left: 35%; color:inherit;}
+    }
+
+
+
   /* Portfolio Strip */
 .ptf-bg {
   min-width: auto;
@@ -369,7 +414,7 @@ p.copyright {
 
 
 /* Buy Strip */
-.buy-bg {
+.bio-bg {
   min-width: auto;
   position: absolute;
   left: 0;
@@ -385,34 +430,28 @@ p.copyright {
   align-items:center;
   justify-content:center;
   }
-  .buycontainer {
-    box-sizing:border-box;
+  .biocontainer {
+    box-sizing:inherit;
     display: flex;
-    width: 1920px;
+    max-width: none;
     align-self: flex-start;
     align-items: center;
     justify-content:center;
     flex-direction:column;
-    height:657px;
+    height:500px;
     position:sticky;
   }
-  .buytext {
+  .biotext {
     width: 1920px;
     top: 50px;
     position:absolute;
     box-sizing: inherit;
   }
-    .buytext h3 i {
+    .biotext h3 i {
       width: 1920px;
       font-size:135px;
       font-weight: normal;
     }
-    .buytext h4 {
-      font-size: 24px;
-      font-weight:100;
-      letter-spacing: 16px;
-    }
-
 
 
 
@@ -581,7 +620,7 @@ p.copyright {
 
 
 
-.salebutton {
+.biobutton {
 		background-image: linear-gradient(black, gray);
 		text-align: center;
 		width: 370px;
@@ -590,10 +629,10 @@ p.copyright {
     display:inline-flex;
     align-items:center;
     justify-content:center;
-    bottom:50px;
     position:absolute;
+    bottom:0px;
 	}
-	.salebutton:hover {
+	.biobutton:hover {
 		background-image: url(https://images.pexels.com/photos/164821/pexels-photo-164821.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
 		background-size: 140%,140%;
 		background-repeat: no-repeat;
@@ -653,17 +692,19 @@ p.copyright {
 
 .contact-page {
   position:absolute;
-  min-height: 500px;
-  justify-content: center;
+  min-height: 100%;
+  justify-items: center;
   align-items:center;
   width:100%;
   background-color: #1B0326;
+  background-size:100%;
   height: 100%;
   box-sizing: border-box;
   display: grid;
+  grid-template-columns: auto;
   margin-top: 100px;
   overflow: auto;
-  left:0;
+  left:0px;
 }
 .contact-title {
   top:50px;
@@ -672,11 +713,73 @@ p.copyright {
   align-self: center;
   justify-self: center;
 }
-.contact-title h3 i {
+.contact-title h2 {
   color:white;
   font-weight:normal;
-  font-size: 135px;
+  font-size: 115px;
 }
+
+input[type=text], select, textarea {
+  width:100%;
+  padding: 12px;
+  border: 1px solid rgb(0, 0, 0);
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #444444;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #c4c4c4;
+}
+
+/* Style the container/contact section */
+.contact-container {
+  position:absolute;
+  top:400px;
+  max-width:1900px;
+  min-width:40%;
+  display:grid;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  grid-template-columns: auto;
+  padding: 10px;
+  align-self:center;
+  justify-self:center;
+  max-width: 1px;
+  color:black;
+  font-size:24px;
+  text-align:left;
+}
+
+/* Clear floats after the columns */
+.row {
+  content: "";
+  display: table;
+}
+
+.column {
+  float: left;
+  width: 90%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
 
 
 
@@ -879,3 +982,118 @@ p.copyright {
   font-weight:normal;
   font-size: 115px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/* Bio Page */
+.biopage {
+  position:absolute;
+  min-height: 100%;
+  justify-items: center;
+  align-items: center;
+  width:100%;
+  background-image:url(./myimages/pexels-eva-elijas-7605539.jpg);
+  background-size:100%;
+  background-repeat:repeat-y;
+  height: auto;
+  box-sizing: border-box;
+  display:grid;
+  margin-top: 100px;
+  overflow: visible;
+  left:0;
+  top:0;
+  grid-template-columns: auto;
+}
+.biotitle {
+  top:10px;
+  position:absolute;
+  box-sizing: inherit;
+  align-self: center;
+  justify-self: center;
+}
+.biotitle h2 {
+  color:white;
+  font-weight:normal;
+  font-size: 115px;
+}
+
+.biotitle h1 {
+  color:white;
+  font-weight:normal;
+  font-size: 115px;
+}
+
+.biopage-wrap {
+  position:absolute;
+  top:620px;
+  max-width: 80%;
+  min-width: 80%;
+  display:grid;
+  grid-template-columns: 80% 20%;
+  column-count: 2;
+  left:10%;
+  overflow:hidden;
+}
+
+.biocolumn-paragraph {
+  position:auto;
+  font-size: 18px;
+  text-align: left;
+  font-family: "Gilroy Light";
+  margin:20px;
+}
+
+.biocolumn-pictures {
+  display:grid;
+  column-count: 1;
+  max-width:100%;
+  padding:0px 0px;
+  box-sizing:border-box;
+  width: 100%;
+  overflow:hidden;
+}
+  .biopic1 {
+    position:auto;
+    display:block;
+    max-width:inherit;
+    padding:0px;
+  }
+  .biopic2 {
+    position:auto;
+    display:block;
+    max-width:inherit;
+    padding:0px;
+  }
+  .biopic3 {
+    position:auto;
+    display:block;
+    max-width:inherit;
+    padding:0px;
+  }
+  .biopic4 {
+    position:auto;
+    display:block;
+    max-width:inherit;
+    padding:0px;
+  }
+  .biopic5 {
+    position:auto;
+    display:block;
+    max-width:inherit;
+    padding:0px;
+  }
+  .biopic6 {
+    position:auto;
+    display:block;
+    max-width:inherit;
+    padding:0px;
+  }
