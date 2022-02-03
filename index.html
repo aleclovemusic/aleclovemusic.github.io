@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <div id="page-container">
-        <div id="content-wrap">
+    <div class="page-container" id="page-container">
+        <div class="content-wrap" id="content-wrap">
             <header class="top-bar">
                 <!-- Navbar Section-->
                 <nav class="topnav" id="myTopnav">
@@ -29,10 +29,13 @@
                         <a href="index.html" class="active">HOME</a>
                         <a href="bio.html">BIOGRAPHY</a>
                         <a href="contact.html">CONTACT</a>
-                        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                            <i class="fa fa-bars"></i>
+
+                    </div> 
+                    <div class="burger">                            
+                        <a href="javascript:void(0);" class="icon" onclick="myBurger()">
+                        <i class="fa fa-bars"></i>
                         </a>
-                    </div>    
+                    </div>   
                 </nav>
             </header>
 
@@ -62,25 +65,24 @@
                         </div>
                             <!-- Title -->
                     <div class="title-home">
-                        <h2>Musician, Composer, Producer</h2>
+                        <h2> Musician, Composer, Producer </h2>
                     </div>
                     </div>
                 </div>
                 <div class="aboutmain" id="myAboutmain">
                     <p>Welcome!</p>
-                    <p>I am an independent composer on a journey from aficionado to connoisseur. On this website, you will find a collection of my previous projects and works, as well as a place to stream royalty-free music that's available for licensing. I have a variety of skill sets in music, such as:</p>
+                    <p>I am an independent composer with a variety of skills, such as:</p>
                     <ul>
-                        <li>Composing original pieces for concert band, marching band, and percussion ensembles;</li>
-                        <li>Scoring for video games and trailers;</li>
-                        <li>Transcribing full ensemble performances and single instruments;</li>
-                        <li>Creating visually appealing and professional-looking music sheets; and</li>
-                        <li>Producing high quality digital audio performances in a number of styles.</li>
+                        <li>Composing original pieces for commonly used ensembles;</li>
+                        <li>Scoring video games and trailers;</li>
+                        <li>Creating commercial-ready sheet music; and</li>
+                        <li>Producing high quality digital audio performances.</li>
                     </ul>
                 </div>
                 <div class="mainquote1">
                     <div class="mainquote1a">"Fantastic...</div>
                     <div class="mainquote1b">...gave me goosebumps."</div>
-                    <div class="mainquote1c"><i>—Bryan Waters, founder of The Cue Tube</i></div>
+                    <div class="mainquote1c"><i>—Bryan Waters, The Cue Tube founder</i></div>
                 </div>
 
 
@@ -88,7 +90,7 @@
 
                 <!--Treble Clef Animation-->
                 <div class="trebleclef" id="trebleClef">
-                    <img src="https://www.pngkey.com/png/full/13-135165_white-treble-clef-png.png">
+                    <img class ="trebleclefimg" src="https://www.pngkey.com/png/full/13-135165_white-treble-clef-png.png">
                 </div>
                 <div class="staff-grid">
                     <div class="staff1"></div>
@@ -96,50 +98,53 @@
                     <div class="staff3"></div>
                     <div class="staff4"></div>
                 </div>
+            <div class="stripwrapper">                <!--Portfolio Strip-->
+                <div class="ptf-bg">
+                    <div class="ptfcontainer">
+                        <div id="ptfText" class="ptftext" data-testid="richTextElement">
+                            <h3><i>PORTFOLIO</i></h3>
+                        </div>
+                        <div class="buttonbox-container">
+                            <div class="twobuttonbox">
+                                <button class="button ostbutton" onclick=location.href='ost.html'>Original Soundtracks</button>
+                                <button class="button bandbutton" onclick=location.href='bandorchestra.html'>Band & Orchestra</button>
+                            </div>
+                        </div>
 
-            <!--Portfolio Strip-->
-            <div class="ptf-bg">
-                <div class="ptfcontainer">
-                    <div id="ptfText" class="ptftext" data-testid="richTextElement">
-                        <h3><i>PORTFOLIO</i></h3>
                     </div>
-                    <div class="buttonbox-container">
-                        <div class="twobuttonbox">
-                            <button class="button ostbutton" onclick=location.href='ost.html'>Original Soundtracks</button>
-                            <button class="button bandbutton" onclick=location.href='bandorchestra.html'>Band & Orchestra</button>
+                </div>
+                <!--Bio Strip-->
+                <div class="bio-bg">
+                    <div class="biocontainer">
+                        <div id="bioText" class="biotext" data-testid="richTextElement">
+                            <h3><i>ALEC'S BIOGRAPHY</i></h3>
+                        </div>
+                        <div class="buttonbox-container">
+                            <button class="button biobutton" onclick=location.href='bio.html'>About</button>
                         </div>
                     </div>
+                </div>
+                <!--Videos Strip-->
+                <div class="video-bg">
+                    <div class="videocontainer">
+                        <div id="videoText" class="videotext" data-testid="richTextElement">
+                            <h3><i>VIDEOS</i></h3>
+                        </div>
+                        <div class="buttonbox-container">
+                            <button class="button videobutton" onclick=location.href='videos.html'>Watch Now</button>
+                        </div>
+                    </div>
+                </div>
+                <!--Contact Strip-->
+                <div class="contact-bg">
+                    <div class="contactcontainer">
+                        <div class="buttonbox-container">
+                            <button class="button contactbutton" onclick=location.href='contact.html'>Contact Me</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                </div>
-            </div>
-            <!--Buy Music Strip-->
-            <div class="bio-bg">
-                <div class="biocontainer">
-                    <div id="bioText" class="biotext" data-testid="richTextElement">
-                        <h3><i>ALEC'S BIOGRAPHY</i></h3>
-                    </div>
-                    <div class="buttonbox-container">
-                        <button class="button biobutton" onclick=location.href='bio.html'>About</button>
-                    </div>
-                </div>
-            </div>
-            <div class="video-bg">
-                <div class="videocontainer">
-                    <div id="videoText" class="videotext" data-testid="richTextElement">
-                        <h3><i>VIDEOS</i></h3>
-                    </div>
-                    <div class="buttonbox-container">
-                        <button class="button videobutton" onclick=location.href='videos.html'>Watch Now</button>
-                    </div>
-                </div>
-            </div>
-            <div class="contact-bg">
-                <div class="contactcontainer">
-                    <div class="buttonbox-container">
-                        <button class="button contactbutton" onclick=location.href='contact.html'>Contact Me</button>
-                    </div>
-                </div>
-            </div>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
             <script src="https://kit.fontawesome.com/7afaf64a99.js" crossorigin="anonymous"></script>
             <script src="app.js"></script>

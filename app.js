@@ -15,6 +15,10 @@ function myPortfolio() {
       }
     }
   }
+  
+function myBurger() {
+    document.getElementById("burger").classList.toggle("show");
+}
 
   $(document).ready(function (){
     $('.autoslider').slick({

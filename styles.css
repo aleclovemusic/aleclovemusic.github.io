@@ -2,18 +2,29 @@ html {
   position:relative;
   min-height:100%;
   background-color:rgb(22, 22, 22);
+  margin:0px;
+  padding:0px;
+  box-sizing:border-box;
+  width:100%;
+  overflow:hidden auto;
 }
 
 body {
-
 	max-width: 1000px;
 	float: none;
 	margin: auto;
 	padding: 0px;
   color:white;
-  height:4917px;
+  height:100%;
   background-color: transparent;
 }
+
+@media only screen and (max-width:767px) {
+  body {
+    height:100%;
+  }
+}
+
 	body, h1, h2 {
 		font-family: "Cinzel";
     }
@@ -33,9 +44,40 @@ body {
   .title-home {
     letter-spacing: 12px;
     position:absolute;
-    bottom:10px;
+    bottom:-0.7em;
     z-index:60;
+    padding:4%;
+    text-align:center;
+    width:92%;
   }
+
+      @media only screen and (max-width:767px) {
+        .title-home h2 {
+          font-size:0.8em;
+        }
+      }
+      @media only screen and (max-width:767px) {
+        .title-home h2 {
+          font-size:0.8em;
+          height:8vw;
+        }
+      }
+      @media only screen and (max-width:667px) {
+        .title-home {
+          height:12vw;
+          
+        }
+        .title-home h2 {
+          font-size:0.6em;
+          letter-spacing:3px;
+        }
+      }
+
+
+
+
+
+
 header {
 	width: 100%;
 	display: block;
@@ -43,11 +85,11 @@ header {
 	padding: 0px;
 }
   .top-bar {
-    min-width:auto;
+    min-width:100%;
     position:fixed;
     top: 0;
     left: 0;
-    width:100%;
+    width:inherit;
     z-index: 1000;
     background-color: black;
     height: 96px;
@@ -86,12 +128,19 @@ p.copyright {
   width: 100%;
   height: 2.5rem;            /* Footer height */
 }
+@media only screen and (max-width:767px) {
+  #footer {
+    position:fixed;
+    bottom:0;
+    max-width:100%;
+  }
+}
 /* Menu CSS */
 .topnav {
   background-color: black;
   height:80px;
-  padding: 14px 16px;
-  overflow:visible;
+  padding: 14px 5vw;
+  overflow:none visible;
   display: flex;
   justify-content:center;
   align-items: center;
@@ -99,7 +148,12 @@ p.copyright {
   position:sticky;
   top:0;
   z-index:1000;
+  width:90vw;
 }
+
+
+
+
 
 .navbar__container {
     display:flex;
@@ -107,7 +161,21 @@ p.copyright {
     height:80px;
     width:100%;
     max-width:1175px;
+    overflow:visible;
 }
+@media screen and (max-width:1079px) {
+  .navbar__container {
+    display:none;
+  }
+  .topnav {
+    display:grid;
+    justify-content:right;
+  }
+}
+
+
+
+
 /* Style the links inside the navigation bar */
 .topnav div div button, div a, a {
   display: inline-flex;
@@ -151,7 +219,7 @@ p.copyright {
 }
 
 .dropdown-content a {
-    background-color:transparent;
+  background-color:transparent;
   color: white;
   padding: 12px 16px;
   text-decoration: none;
@@ -178,10 +246,29 @@ p.copyright {
   color: #CE2351;
 }
 
+
+
+
+
 /* Hide the link that should open and close the topnav on small screens */
-.topnav .navbar__container .icon {
-  display: none;
+
+
+.topnav .burger {
+  position:auto;
+  height:100%;
 }
+.burger .fa {
+  line-height: 40px;
+  font-size: 40px;
+}
+
+
+@media screen and (min-width:1080px) {
+  .topnav .burger .icon {
+    display: none;
+  }
+}
+
 
 .banner {
   display:flex;
@@ -202,8 +289,8 @@ p.copyright {
   position:absolute;
   overflow:hidden;
   display:flex;
-  max-width: 1900px;
-  width:80%;
+  max-width: 1440px;
+  width:100%;
   justify-content:center;
   align-items:center;
   height: 110%;
@@ -232,7 +319,7 @@ p.copyright {
 
 
 .slidertrack {
-  width: 2244px; 
+  width: 100%; 
   height:inherit;
   transform: translate3d(748px, 0px, 0px);
   position: absolute;
@@ -241,8 +328,9 @@ p.copyright {
   z-index:1;
   display:contents;
   margin-left: auto;
-  margin-right: auto;
+  margin-right:auto;
 }
+
 
 .autoslider {
   position:absolute;
@@ -255,9 +343,151 @@ p.copyright {
   z-index:20;
   -webkit-mask-image:-webkit-linear-gradient(linear, right, left, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
   mask-image: linear-gradient(to left, rgba(0,0,0,1), rgba(0,0,0,0));
-  overflow:hidden;
+  overflow:scroll hidden;
   margin-left:45%;
 }
+
+
+              @media only screen and (max-width:1024px) {
+                .banner {
+                  height:60vw;
+                }
+                .banner-max {
+                  display:grid;
+                }
+                .autoslider {
+                  margin-left:25%;
+                  display:grid;
+                  
+                }
+                .autoslider img {
+                  height:80vw;
+                  width:auto;
+                }
+                .logoplain {
+                  width:40vw;
+                  top:10vw;
+                  min-width:200px;
+                  grid-column:1 / span 1;
+                }
+              }
+              @media only screen and (max-width:767px) {
+                .logoplain {
+                  width:40vw;
+                  top:10vw;
+                  min-width:200px;
+                }
+                .autoslider {
+                  margin-left:30vw;
+                }
+                .autoslider img {
+                  height:70vw;
+                  width:auto;
+                }
+                .slick-next {
+                  display:none !important;
+                }
+                .slick-prev {
+                  display:none !important;
+                }
+              }
+
+              @media only screen and (max-width:500px) {
+                .banner {
+                  min-height:100vw;
+                }
+                .banner-max {
+                  position:relative;
+                  display:grid;
+                  top:0;
+                  grid-template-columns:minmax(autofit, 10rem);
+                  grid-template-rows:55vw 80vw;
+                  grid-template-areas:
+                    ".logoplain .title-home"
+                    ".autoslider .autoslider";
+                  gap:0.4em;
+                }
+                .slidertrack {
+                  display:contents;
+
+                }
+                .autoslider {
+                  position:relative;
+                  grid-column: span 2;
+                  grid-row: 2 / span 1;
+                  z-index:5;
+                  height:inherit;
+                  bottom:auto;
+                  width:inherit;
+                  margin-left:50vw;
+                  -webkit-mask-image:-webkit-linear-gradient(linear, right, left, from(rgba(0, 0, 0, 0.582)), to(rgba(0,0,0,0)));
+                  mask-image: linear-gradient(to left, rgb(0, 0, 0), rgba(0, 0, 0, 0.171));
+                }
+                .logoplain {
+                  position:relative;
+                  top:0;
+                  height:auto;
+                  width:inherit;
+                  grid-column:1 / span 1;
+                  grid-row: 1 / span 1;
+                  justify-self:start;
+                }
+                .title-home {
+                  position:relative;
+                  height:inherit;
+                  width:100%;
+                  bottom:auto;
+                  margin-top:65%;
+                  justify-content:center;
+                  grid-column:2 / span 1;
+                  grid-row:1 / span 1;
+                  justify-self:end;
+                  font-size:0.8em;
+                }
+                .autoslider img {
+                  height:50vw;
+                  width:auto;
+                }
+              }
+              @media only screen and (max-width:355px) {
+                .banner {
+                  min-height:163vw;
+                }
+                .banner-max {
+                  width:100%;
+                  display:grid;
+                  grid-template-columns:auto;
+                  grid-template-rows:min-content min-content min-content;
+                  grid-template-areas:
+                    ".logoplain .logoplain"
+                    ".title-home .title-home"
+                    ".autoslider .autoslider";
+                  gap:0.4em;
+                }
+                .logoplain {
+                  grid-column: 1 / span 2;
+                  grid-row: 1 / span 1;
+                  min-width:stretch;
+                  width:inherit;
+                  height:auto;
+                  justify-self:center;
+                }
+                .title-home {
+                  grid-column: 1 / span 2;
+                  grid-row: 2 / span 1;
+                  width:inherit;
+                  height:auto;
+                  justify-self:start;
+                  margin-top:0;
+                  padding-top:0;
+                }
+                .autoslider {
+                  grid-column:1 / span 2;
+                  grid-row: 3 / span 1;
+                  height:40vw;
+                }
+              }
+
 
 .staff-grid {
   display:grid;
@@ -312,6 +542,17 @@ p.copyright {
     margin:20px;
 	}
 
+  @media only screen and (max-width:1023px) {
+    .aboutmain {
+      width:auto;
+      min-height:40vw;
+      max-height:66vw;
+      margin-left:23vw;
+      font-size:auto;
+    }
+
+  }
+
 
 
   /* Treble Clef */
@@ -325,6 +566,28 @@ p.copyright {
     position:relative;
   }
 
+  @media only screen and (max-width:767px) {
+    .trebleclefimg {
+      display:none;
+    }
+    .aboutmain {
+      width:95%;
+      float:left;
+      min-height:40vw;
+      max-height:none;
+      margin-left:0vw;
+      margin-right:8vw;
+      top:760px;
+    }
+    .staff-grid {
+      right:0%;
+    }
+    .aboutmain p, .aboutmain ul {
+      font-size:16px;
+      text-align:left;
+    }
+  }
+
 
 
 
@@ -336,7 +599,7 @@ p.copyright {
   }
   .mainquote1 {
     position:absolute;
-    display:block;
+    display:content;
     background:transparent;
     left:35%;
     top:360px;
@@ -349,6 +612,7 @@ p.copyright {
       position:auto;
       display:block;
       font-size:28px;
+      text-indent:40px;
     }
     .mainquote1b {
       position:relative;
@@ -362,52 +626,214 @@ p.copyright {
       display:block;
       top:100px;
       font-size:18px;
-      text-indent:200px;
+      text-indent:160px;
     }
     @keyframes quote1move {
       0%   {left: 36%; color: transparent;}
       20%  {left: 36%; color: transparent;}
       100% {left: 35%; color:inherit;}
     }
+    @media only screen and (max-width:1111px) {
+      .mainquote1 {
+        left:40%;
+      }
+      .mainquote1a {
+        top:auto;
+      }
+      .mainquote1b {
+        top:auto;
+      }
+      .mainquote1c {
+        top:auto;
+        margin-top:15px;
+      }
+      @keyframes quote1move {
+        0%   {left: 41%; color: transparent;}
+        20%  {left: 41%; color: transparent;}
+        100% {left: 40%; color:inherit;}
+      }
+
+
+        
+    }
+    @media only screen and (max-width:1024px) {
+      .mainquote1 {
+        top:300px;
+      }
+      .mainquote1a {
+        font-size:24px;
+      }
+      .mainquote1b {
+        text-indent:50px;
+        font-size:24px;
+      }
+      .mainquote1c {
+        text-indent:100px;
+        font-size:16px;
+      }
+    }
+
+
+
+
+      @media only screen and (max-width:767px) {
+      .mainquote1 {
+        left:20%;
+        top: 600px;
+      }
+      .mainquote1a {
+        font-size:0.5em;
+        text-indent:0;
+        top:auto;
+      }
+      
+      .mainquote1b {
+        font-size:0.5em;
+        text-indent:50px;
+        top:auto;
+      }
+      .mainquote1c {
+        font-size:0.3em;
+        margin-top:13px;
+        top:0;
+      }
+      @keyframes quote1move {
+        0%   {left: 22%; color: transparent;}
+        10%  {left: 22%; color: transparent;}
+        100% {left: 20%; color:inherit;}
+      }
+    }
+
+
+
+    @media only screen and (max-width:500px) {
+      .mainquote1 {
+        left:7%;
+      }
+      .mainquote1a, .mainquote1b {
+        font-size:0.5em;
+        text-indent:0;
+        top:auto;
+      }
+      .mainquote1c {
+        font-size:0.3em;
+        text-indent:30px;
+        margin-top:13px;
+        top:0;
+      }
+      @keyframes quote1move {
+        0%   {left: 10%; color: transparent;}
+        10%  {left: 10%; color: transparent;}
+        100% {left: 8%; color:inherit;}
+      }
+    }
+
+
+
+    @media only screen and (max-width:355px) {
+      .mainquote1 {
+        left:7%;
+        top:160vw;
+      }
+      .mainquote1a, .mainquote1b {
+        font-size:0.5em;
+        text-indent:0;
+      }
+      .mainquote1c {
+        font-size:0.3em;
+        text-indent:30px;
+        margin-top:13px;
+      }
+      @keyframes quote1move {
+        0%   {left: 10%; color: transparent;}
+        10%  {left: 10%; color: transparent;}
+        100% {left: 8%; color:inherit;}
+      }
+    }
+
+
+
+
+    /*--------------------------------MAIN STRIP WRAPPER-----------------------------------*/
+
+
+.stripwrapper {
+  display:grid;
+  position:absolute;
+  box-sizing:border-box;
+  height:10px;
+  width:100%;
+  top:1080px;
+  left:0;
+  right:0;
+  margin-top: 100px;
+  column-count:1;
+  grid-template-columns:100%;
+  grid-gap:0px;
+  grid-template-rows:657px 657px 657px 657px;
+  grid-template-areas:
+  "ptfbg"
+  "biobg"
+  "videobg"
+  "contactbg";
+}
 
 
 
   /* Portfolio Strip */
 .ptf-bg {
+  grid-area:ptfbg;
   min-width: auto;
-  position: absolute;
+  position: relative;
   left: 0;
-  top: 1270px;
+  top: 0px;
   width:100%;
   background-color: #1B0326;
   height: 657px;
-  box-sizing: border-box;
-  display: flex;
-  margin-top: 100px;
-  overflow: auto;
+  box-sizing: content-box;
+  overflow: hidden;
   align-items:center;
   justify-content:center;
 }
   .ptfcontainer {
     box-sizing:inherit;
     display: flex;
-    max-width: none;
+    max-width: 100%;
     align-self: flex-start;
     align-items: center;
     justify-content:center;
     flex-direction:column;
-    height:500px;
-    position:sticky;
+    column-count: 5;
+    height:100%;
+    position:relative;
+    width:inherit;
+    row-gap: 20px;
   }
   .ptftext {
     top:50px;
     position:absolute;
+    display:flex;
     box-sizing: inherit;
+    max-width:100%;
   }
   .ptftext h3 i {
     color:white;
     font-weight:normal;
     font-size: 135px;
+  }
+  @media only screen and (max-width:1279px) {
+    .ptftext h3 i {
+      font-size:15vw;
+      font-weight:normal;
+    }
+    .ptftext {
+      margin-top:0px;
+    }
+  }
+  @media only screen and (max-width:767px) {
+    .ptf-bg {
+      max-height:100vw;
+    }
   }
 
 
@@ -415,99 +841,139 @@ p.copyright {
 
 /* Buy Strip */
 .bio-bg {
-  min-width: auto;
+  grid-area:biobg;
   position: absolute;
-  left: 0;
-  top: 2270px;
-  width: 100%;
-  background-color: #212121;
+  left: 0px;
   height: 657px;
-  box-sizing: border-box;
-  display: flex;
-  margin-top: 100px;
-  margin-bottom: 100px;
-  overflow:visible;
+  top: auto;
+  width:100%;
+  background-color: #212121;
+  box-sizing: content-box;
+  overflow:hidden;
   align-items:center;
   justify-content:center;
-  }
+}
   .biocontainer {
     box-sizing:inherit;
     display: flex;
-    max-width: none;
+    max-width: 100%;
     align-self: flex-start;
     align-items: center;
     justify-content:center;
     flex-direction:column;
-    height:500px;
-    position:sticky;
+    height:100%;
+    position:relative;
+    width:inherit;
   }
   .biotext {
-    width: 1920px;
-    top: 50px;
-    position:absolute;
+    width: 100%;
+    height:100%;
+    position:relative;
     box-sizing: inherit;
+    margin-top:50px;
   }
+
     .biotext h3 i {
-      width: 1920px;
+      width:100%;
       font-size:135px;
       font-weight: normal;
     }
 
-
+    @media only screen and (max-width:1279px) {
+      .biotext h3 i {
+        font-size:15vw;
+        font-weight:normal;
+      }
+      .biotext {
+        margin-top:0px;
+      }
+    }
+    @media only screen and (max-width:809px) {
+      .bio-bg {
+        height:100vw;
+      }
+    }
+    @media only screen and (max-width:767px) {
+      .bio-bg {
+        max-height:100vw;
+        top:auto;
+        margin:0px;
+      }
+    }
 
   /* Videos Strip */
   .video-bg {
+    grid-area:videobg;
     min-width: auto;
     position: absolute;
     left: 0;
-    top: 3270px;
-    width:100%;
+    top: auto;
+    width:inherit;
     background-color: #010542;
     height: 657px;
     box-sizing: border-box;
-    display: flex;
-    margin-top: 100px;
-    overflow: visible;
+    overflow: hidden;
     align-items:center;
     justify-content:center;
   }
     .videocontainer {
       box-sizing:inherit;
+      position:relative;
       display: flex;
-      max-width: none;
+      max-width: 100%;
       align-self: flex-start;
       align-items: center;
       justify-content:center;
       flex-direction:column;
-      height:500px;
-      position:sticky;
+      height:100%;
+
     }
     .videotext {
-      width: 1920px;
-      top: 50px;
-      position:absolute;
+      width: 100%;
+      height:100%;
+      position:relative;
       box-sizing: inherit;
     }
       .videotext h3 i {
-        width: 1920px;
+        width: 100%;
         font-size:135px;
         font-weight: normal;
       }
+          @media only screen and (max-width:1279px) {
+            .videotext {
+              margin-top:8vw;
+            }
+          }
+          @media only screen and (max-width:809px) {
+            .videotext h3 i {
+              font-size:15vw;
+              font-weight:normal;
+            }
+            .video-bg {
+              height:100vw;
+            }
+          }
+          @media only screen and (max-width:767px) {
+            .video-bg {
+              max-height:100vw;
+              top: 1990px;
+            }
+          }
 
 
 
 /* Contact Strip */
 .contact-bg {
+  grid-area:contactbg;
   min-width: auto;
   position: absolute;
   left: 0%;
-  top: 4270px;
-  width:100%;
+  top: auto;
+  width:inherit;
   background-image: linear-gradient(#32113b,#961e1e);
   height: 657px;
   box-sizing: border-box;
   display: flex;
-  margin-top: 100px;
   overflow: auto;
   align-items:center;
   justify-content:center;
@@ -522,6 +988,12 @@ p.copyright {
     height:90px;
     position:relative;
   }
+  @media only screen and (max-width:767px) {
+    .contact-bg {
+      max-height:100vw;
+      top:2347px;
+    }
+  }
 
 
 
@@ -533,18 +1005,55 @@ p.copyright {
   width:100%;
   height:fit-content;
   margin-top:0px;
+  margin-bottom:50px;
   position: absolute;
-  align-self:flex-start;
+  align-self:center;
+  box-sizing:border-box;
   bottom:40px;
 }
+  @media only screen and (max-width:1279px) { 
+    .buttonbox-container {
+      margin-bottom:0px;
+    }
+  }
+
 .twobuttonbox {
   display:flex;
+  position:absolute;
   justify-content:space-between;
   height:90px;
   align-items:center;
   box-sizing:border-box;
   min-width:900px;
+  bottom:10vw;
 }
+
+@media only screen and (max-width:1279px) {
+  .twobuttonbox {
+    bottom: 12vw;
+  }
+}
+@media only screen and (max-width:1023px) {
+  .twobuttonbox {
+    min-width:auto;
+    flex-direction:column;
+    min-height:26vw;
+    row-gap: 4vw;
+    bottom:8vw;
+  }
+}
+@media only screen and (max-width:833px) {
+  .twobuttonbox {
+    bottom: 10vw;
+  }
+}
+@media only screen and (max-width:809px) {
+  .twobuttonbox {
+    bottom: 15vw;
+  }
+}
+
+
 .button {
   font-family: Cinzel;
   border: none;
@@ -597,6 +1106,19 @@ p.copyright {
     color: white;
     box-shadow: 1px 1px 25px black;
   }
+  @media only screen and (max-width:1279px) {
+    .ostbutton {
+      bottom: 50px;
+      justify-self: start;
+    }
+  }
+  @media only screen and (max-width:809px) {
+    .ostbutton {
+      height:18vw;
+      width:60vw;
+      bottom:10vw;
+    }
+  }
 
 
 
@@ -617,6 +1139,19 @@ p.copyright {
     color: white;
     box-shadow: 1px 1px 25px black;
   }
+  @media only screen and (max-width:1279px) {
+    .bandbutton {
+      bottom: 50px;
+      justify-self: end;
+    }
+  }
+  @media only screen and (max-width:809px) {
+    .bandbutton {
+      height:18vw;
+      width:60vw;
+      bottom:10vw;
+    }
+  }
 
 
 
@@ -630,8 +1165,20 @@ p.copyright {
     align-items:center;
     justify-content:center;
     position:absolute;
-    bottom:0px;
 	}
+
+  @media only screen and (max-width:1279px) {
+    .biobutton {
+      bottom: 50px;
+    }
+  }
+  @media only screen and (max-width:809px) {
+    .biobutton {
+      height:18vw;
+      width:60vw;
+      bottom:10vw;
+    }
+  }
 	.biobutton:hover {
 		background-image: url(https://images.pexels.com/photos/164821/pexels-photo-164821.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
 		background-size: 140%,140%;
@@ -653,6 +1200,18 @@ p.copyright {
     position:absolute;
     bottom:0px;
 	}
+    @media only screen and (max-width:1279px) {
+      .videobutton {
+        bottom: 10vw;
+      }
+    }
+    @media only screen and (max-width:809px) {
+      .videobutton {
+        height:18vw;
+        width:60vw;
+        bottom:10vw;
+      }
+    }
 	.videobutton:hover {
 		background-image: url(https://i.pinimg.com/564x/89/75/b0/8975b0011188e7754fff3f696b0ffcb8.jpg);
 		background-size: 140%,140%;
@@ -675,6 +1234,14 @@ p.copyright {
     position: absolute;
     bottom:20%;
 	}
+  @media only screen and (max-width:809px) {
+    .contactbutton {
+      height:30vw;
+      width:70vw;
+      bottom:10vw;
+      font-size:7vw;
+    }
+  }
 	.contactbutton:hover {
 		background-image: url(https://i.pinimg.com/originals/e3/3e/5d/e33e5de0c7c296a7072e9780fe1beaae.jpg);
 		background-position: 50% 53%;
@@ -687,23 +1254,27 @@ p.copyright {
   }
 
 
-
+/* Contact Page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
 .contact-page {
   position:absolute;
-  min-height: 100%;
+  height:100%;
   justify-items: center;
   align-items:center;
   width:100%;
   background-color: #1B0326;
   background-size:100%;
-  height: 100%;
   box-sizing: border-box;
   display: grid;
-  grid-template-columns: auto;
+  column-count: 1;
+  row-gap: 0px;
+  grid-template-areas: 
+    "contact-title"
+    "divider"
+    "social-icons"
+    "contact-container";
   margin-top: 100px;
-  overflow: auto;
   left:0px;
 }
 .contact-title {
@@ -717,6 +1288,14 @@ p.copyright {
   color:white;
   font-weight:normal;
   font-size: 115px;
+}
+
+.social-icons {
+  position:absolute;
+  grid-area:social-icons;
+  box-sizing:content-box;
+  padding:20px;
+  bottom:2vw;
 }
 
 input[type=text], select, textarea {
@@ -742,10 +1321,11 @@ input[type=submit]:hover {
 
 /* Style the container/contact section */
 .contact-container {
+  grid-area:contact-container;
+  box-sizing:content-box;
   position:absolute;
-  top:400px;
-  max-width:1900px;
-  min-width:40%;
+  top:-30%;
+  min-width:60%;
   display:grid;
   border-radius: 5px;
   background-color: #f2f2f2;
@@ -769,14 +1349,30 @@ input[type=submit]:hover {
   float: left;
   width: 90%;
   margin-top: 6px;
-  padding: 20px;
+  padding: 5%;
 }
 
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
-  .column, input[type=submit] {
-    width: 100%;
+  .column {
+    top:40vw;
+    width: 96%;
     margin-top: 0;
+    padding-left:2%;
+    padding-right:2%;
+  }
+  input[type=submit] {
+    width:100%;
+  }
+  textarea {
+    width:96%;
+    padding-left:2%;
+    padding-right:2%;
+  }
+  input[type="text"] {
+    width:96%;
+    padding-left:2%;
+    padding-right:2%;
   }
 }
 
@@ -803,11 +1399,10 @@ input[type=submit]:hover {
 
 
 
-/* Videos Page */
-
+/* Videos Page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .videospage {
   position:absolute;
-  min-height: 100%;
+  height:100vmax;
   justify-items: center;
   align-items: center;
   width:100%;
@@ -815,13 +1410,12 @@ input[type=submit]:hover {
   background-color:rgba(0, 0, 0, 0.459);
   background-blend-mode:saturation;
   background-repeat:no-repeat;
-  background-size:100%;
+  background-size:cover;
   background-attachment:fixed;
-  height: auto;
+  background-position:center;
   box-sizing: border-box;
   display: grid;
   margin-top: 100px;
-  overflow: auto;
   left:0;
   grid-template-columns: auto;
 }
@@ -875,15 +1469,24 @@ input[type=submit]:hover {
 .video_box {
   position:absolute;
   top:400px;
-  max-width: 1740px;
+  width: 100%;
   display:grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns:repeat(auto-fit, minmax(10rem, 40rem));
+  justify-content:center;
+  box-sizing:border-box;
 }
 
 .video_embed {
-  position:auto;
-  padding:10px;
+  padding:5px;
+  max-width:100%;
+  height:inherit;
+  box-sizing:content-box;
 }
+.video_embed iframe {
+  max-width:560px;
+  width:100%;
+  aspect-ratio: 16/9;
+} 
 
 
 
@@ -892,22 +1495,21 @@ input[type=submit]:hover {
 
 
 
-/* OST page*/
+/* OST page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 .ostpage {
   position:absolute;
-  min-height: 100%;
+  height:100vmax;
   justify-items: center;
   align-items: center;
   width:100%;
   background-image:url(./myimages/pexels-mnm-zameer-3308588.jpg);
-  background-repeat: repeat-y;
-  background-size:100%;
-  height: auto;
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-attachment:fixed;
   box-sizing: border-box;
   display: grid;
   margin-top: 100px;
-  overflow: visible;
   left:0;
   grid-template-columns: auto;
 }
@@ -926,16 +1528,29 @@ input[type=submit]:hover {
 .ost_grid {
   position:absolute;
   top:400px;
-  max-width: 1740px;
+  max-width: 100%;
   display:grid;
-  grid-template-columns:760px 760px;
-  grid-template-rows:760px;
-  column-gap: 80px;
-  width:80%;
+  grid-template-columns:repeat(auto-fit, minmax(10rem, 40rem));
+  grid-template-rows:repeat(auto-fit, minmax(10rem, 30rem));
+  column-gap: 50px;
+  row-gap: 50px;
+  width:100%;
+  height:fit-content;
+  justify-content:center;
 }
-.ost_segment {
-  position:auto;
-  padding:50px;
+.ostsegment {
+  position:relative;
+  display:grid;
+  grid-template-columns:inherit;
+  grid-template-rows:fit-content min-content;
+  justify-content:center;
+}
+.ost_embed {
+  position:relative;
+  min-width:200px;
+}
+a .sc-button {
+  display:none;
 }
 
 
@@ -952,21 +1567,20 @@ input[type=submit]:hover {
 
 
 
-/* Band & Orchestra Page */
+
+/* Band & Orchestra Page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .bandpage {
   position:absolute;
-  min-height: 100%;
   justify-items: center;
   align-items: center;
   width:100%;
   background-image:url(./myimages/pexels-eva-elijas-7605539.jpg);
   background-size:100%;
   background-repeat:repeat-y;
-  height: auto;
+  height: 100vmax;
   box-sizing: border-box;
   display: grid;
   margin-top: 100px;
-  overflow: visible;
   left:0;
   grid-template-columns: auto;
 }
@@ -994,21 +1608,33 @@ input[type=submit]:hover {
 
 
 
-/* Bio Page */
+/* Bio Page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+
+
+
+
+
+
+
+
+
+
+
+
 .biopage {
   position:absolute;
-  min-height: 100%;
   justify-items: center;
   align-items: center;
   width:100%;
   background-image:url(./myimages/pexels-eva-elijas-7605539.jpg);
-  background-size:100%;
-  background-repeat:repeat-y;
-  height: auto;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-attachment:initial;
+  height: 100vmax;
   box-sizing: border-box;
   display:grid;
   margin-top: 100px;
-  overflow: visible;
   left:0;
   top:0;
   grid-template-columns: auto;
@@ -1096,4 +1722,88 @@ input[type=submit]:hover {
     display:block;
     max-width:inherit;
     padding:0px;
+  }
+
+
+ /*All Pages Responsive Design*/
+
+
+  @media only screen and (max-width:1023px) {
+    .videostitle h2 {
+      font-size:7vw;
+    }
+    .osttitle h2 {
+      font-size:7vw;
+    }
+    .bandtitle h2 {
+      font-size:7vw;
+    }
+    .biotitle {
+      top:35px;
+    }
+    .biotitle h1, .biotitle h2 {
+      position:relative;
+      font-size:7vw;
+    }
+    .biopage-wrap {
+      top:45vw;
+      margin-top:70px;
+      max-width:98%;
+      left:1%;
+    }
+    
+
+    .contact-title h2{
+      font-size:7vw;
+      position:static;
+    }
+    .contact-container {
+      position:relative;
+      font-size: 18px;
+      max-width: 100%;
+      top:0;
+    }
+    .social-icons {
+      bottom:0;
+      margin-top:30vw;
+      position:relative;
+      font-size:6vw;
+    }
+    .divider {
+      top:15vw;
+    }
+    .ost_grid {
+      top:30vw;
+    }
+    .ostsegment h3 {
+      font-size: 7vw;
+      padding-top:20px;
+    }
+    .video_box {
+      top:40vw;
+    }
+  }
+  @media only screen and (max-width:580px) {
+    .biopage-wrap {
+      column-count: 1;
+      grid-template-columns: auto;
+      grid-template-rows:auto auto;
+      grid-template-areas: 
+        "biocolumn-paragraph"
+        "biocolumn-pictures";
+    }
+    .biocolumn-pictures {
+      grid-area:biocolumn-pictures;
+      position:relative;
+      min-width:116px;
+      max-height:min-content;
+      display:grid;
+      grid-template-areas: 
+      "biopic1 biopic2 biopic3"
+      "biopic4 biopic5 biopic6";
+    }
+    .biocolumn-pictures img {
+      position:relative;
+      max-width:100%;
+    }
   }
