@@ -250,25 +250,108 @@ p.copyright {
 
 
 
-/* Hide the link that should open and close the topnav on small screens */
+/* BURGER */
 
 
 .topnav .burger {
-  position:auto;
+  position:absolute;
   height:100%;
+  top:0rem;
+  right:1rem;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index:999;
 }
 .burger .fa {
   line-height: 40px;
   font-size: 40px;
 }
+.burgermenu ul {
+  margin:0;
+  padding:0;
+  display:flex;
+}
+.burgermenu li {
+  list-style:none;
+}
+.burgermenu li a {
+  text-decoration:none;
+  color:white;
+  padding:1rem;
+  display:block;
+}
+.burgermenu-content {
+  top:2rem;
+}
+
+/* BURGER HOVER*/
+
+.burgermenu li a:hover {
+  color:#CE2351;
+}
+
+/* BURGER CONDITIONS*/
 
 
-@media screen and (min-width:1080px) {
-  .topnav .burger .icon {
+  .topnav .burger {
     display: none;
+  }
+  .burgermenu {
+    display:none;
+    position:absolute;
+    top:0px;
+    right:0px;
+    height:1000%;
+    z-index:998;
+  }
+
+
+@media (max-width:1079px) {
+  .topnav .burger {
+    display:flex;
+  }
+  .burgermenu {
+    display:none;
+    max-width:0.9vw;
+    min-width:400px;
+    min-height:100%;
+    background-color:#1b1b1b;
+
+  }
+  .burgermenu ul {
+    width:100%;
+    flex-direction:column;
+  }
+  .burgermenu.active {
+    display:flex;
   }
 }
 
+/*BURGER BUTTON*/
+
+.burgermenu button {
+  background-color: transparent;
+  color:white;
+  font-family: "Gilroy Light";
+  border:none;
+  font-size: 17px;
+  padding:1rem;
+  cursor:pointer;
+  width:100%;
+}
+.burgermenu button:hover, .burgermenu button:focus {
+  color:#CE2351;
+}
+.burger-ptfdrop {
+  background-color: #333333;
+  display:none;
+}
+.show-ptfcontent {display:block}
+
+
+
+
+/*````````````````````````````````````````BANNER```````````````````*/
 
 .banner {
   display:flex;
