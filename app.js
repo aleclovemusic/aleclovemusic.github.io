@@ -1,5 +1,5 @@
 function myPortfolio() {
-    document.getElementById("myPortfolio").classList.toggle("show");
+    document.getElementById("ptfDropdown").classList.toggle("show");
 }
   
   // Close the dropdown if the user clicks outside of it
@@ -15,10 +15,6 @@ function myPortfolio() {
       }
     }
   }
-  
-function myBurger() {
-    document.getElementById("burger").classList.toggle("show");
-}
 
   $(document).ready(function (){
     $('.autoslider').slick({
@@ -28,3 +24,30 @@ function myBurger() {
       autoplaySpeed: 4000,
     });
   });
+
+
+  //burger
+
+const burgerButton = document.getElementsByClassName("burger")[0]
+const burgerLinks = document.getElementsByClassName("burgermenu")[0]
+
+burgerButton.addEventListener('click', () => {
+  burgerLinks.classList.toggle('active')
+})
+
+function burgerPtfdrop() {
+    document.getElementById("burgerPtfdrop").classList.toggle("show-ptfcontent");
+}
+
+window.onclick = function(event) {
+  if(!event.target.matches('.burger-ptfbutton')) {
+    var ptfmenus = document.getElementsByClassName("burger-ptfdrop");
+    var j;
+    for (j = 0; j < ptfmenus.length; j++) {
+      var openPtfmenu = ptfmenus[j];
+      if (openPtfmenu.classList.contains('show-ptfcontent')) {
+        openPtfmenu.classList.remove('show-ptfcontent');
+      }
+    }
+  }
+}
