@@ -65,7 +65,7 @@ body {
       @media only screen and (max-width:667px) {
         .title-home {
           height:12vw;
-          
+          bottom:1vw;
         }
         .title-home h2 {
           font-size:0.6em;
@@ -311,7 +311,6 @@ p.copyright {
     display:flex;
   }
   .burgermenu {
-    display:none;
     max-width:0.9vw;
     min-width:400px;
     min-height:100%;
@@ -514,6 +513,7 @@ p.copyright {
                   grid-column:1 / span 1;
                   grid-row: 1 / span 1;
                   justify-self:start;
+                  min-width:auto;
                 }
                 .title-home {
                   position:relative;
@@ -637,7 +637,6 @@ p.copyright {
   }
 
 
-
   /* Treble Clef */
   .trebleclef {
     width: 227px; 
@@ -656,18 +655,30 @@ p.copyright {
     .aboutmain {
       width:95%;
       float:left;
-      min-height:40vw;
       max-height:none;
       margin-left:0vw;
       margin-right:8vw;
-      top:760px;
+      top:100vw;
     }
     .staff-grid {
-      right:0%;
+      display:none;
     }
     .aboutmain p, .aboutmain ul {
       font-size:16px;
       text-align:left;
+    }
+  }
+  @media only screen and (max-width:500px) {
+    .aboutmain {
+      width:100%;
+      top:125vw;
+      margin-right:0;
+    }
+  }
+  @media only screen and (max-width:355px) {
+    .aboutmain {
+      font-size:1rem;
+      top:190vw;
     }
   }
 
@@ -762,7 +773,7 @@ p.copyright {
       @media only screen and (max-width:767px) {
       .mainquote1 {
         left:20%;
-        top: 600px;
+        top: 81vw;
       }
       .mainquote1a {
         font-size:0.5em;
@@ -819,11 +830,11 @@ p.copyright {
         top:160vw;
       }
       .mainquote1a, .mainquote1b {
-        font-size:0.5em;
+        font-size:1rem;
         text-indent:0;
       }
       .mainquote1c {
-        font-size:0.3em;
+        font-size:0.8rem;
         text-indent:30px;
         margin-top:13px;
       }
@@ -844,7 +855,6 @@ p.copyright {
   display:grid;
   position:absolute;
   box-sizing:border-box;
-  height:10px;
   width:100%;
   top:1080px;
   left:0;
@@ -853,13 +863,40 @@ p.copyright {
   column-count:1;
   grid-template-columns:100%;
   grid-gap:0px;
-  grid-template-rows:657px 657px 657px 657px;
+  grid-template-rows:41rem 41rem 41rem 41rem;
   grid-template-areas:
   "ptfbg"
   "biobg"
   "videobg"
   "contactbg";
 }
+
+  @media only screen and (max-width:900px) {
+    .stripwrapper {
+      grid-template-rows: auto auto auto auto;
+    }
+  }
+    @media only screen and (max-width:767px) {
+      .stripwrapper {
+        top:130vw;
+      }
+    }
+      @media only screen and (max-width:530px) {
+        .stripwrapper {
+          top:150vw;
+        }
+      }
+        @media only screen and (max-width:465px) {
+          .stripwrapper {
+            top:170vw;
+          }
+        }
+          @media only screen and (max-width:355px) {
+            .stripwrapper {
+              top:270vw;
+            }
+          }
+
 
 
 
@@ -904,28 +941,32 @@ p.copyright {
     font-weight:normal;
     font-size: 135px;
   }
-  @media only screen and (max-width:1279px) {
-    .ptftext h3 i {
-      font-size:15vw;
-      font-weight:normal;
-    }
-    .ptftext {
-      margin-top:0px;
-    }
-  }
-  @media only screen and (max-width:767px) {
-    .ptf-bg {
-      max-height:100vw;
-    }
-  }
-
+      @media only screen and (max-width:1279px) {
+        .ptftext h3 i {
+          font-size:15vw;
+          font-weight:normal;
+        }
+        .ptftext {
+          margin-top:0px;
+        }
+      }
+        @media only screen and (max-width:767px) {
+          .ptf-bg {
+            max-height:100vw;
+          }
+        }
+          @media only screen and (max-width:355px) {
+            .ptftext {
+              top:0;
+            }
+          }
 
 
 
 /* Buy Strip */
 .bio-bg {
   grid-area:biobg;
-  position: absolute;
+  position: relative;
   left: 0px;
   height: 657px;
   top: auto;
@@ -962,33 +1003,32 @@ p.copyright {
       font-weight: normal;
     }
 
-    @media only screen and (max-width:1279px) {
-      .biotext h3 i {
-        font-size:15vw;
-        font-weight:normal;
+      @media only screen and (max-width:1279px) {
+        .biotext h3 i {
+          font-size:15vw;
+          font-weight:normal;
+        }
+        .biotext {
+          margin-top:0px;
+        }
       }
-      .biotext {
-        margin-top:0px;
-      }
-    }
-    @media only screen and (max-width:809px) {
-      .bio-bg {
-        height:100vw;
-      }
-    }
-    @media only screen and (max-width:767px) {
-      .bio-bg {
-        max-height:100vw;
-        top:auto;
-        margin:0px;
-      }
-    }
-
+        @media only screen and (max-width:809px) {
+          .bio-bg {
+            height:100vw;
+          }
+        }
+          @media only screen and (max-width:767px) {
+            .bio-bg {
+              max-height:100vw;
+              top:auto;
+              margin:0px;
+            }
+          }
   /* Videos Strip */
   .video-bg {
     grid-area:videobg;
     min-width: auto;
-    position: absolute;
+    position: relative;
     left: 0;
     top: auto;
     width:inherit;
@@ -1027,21 +1067,20 @@ p.copyright {
               margin-top:8vw;
             }
           }
-          @media only screen and (max-width:809px) {
-            .videotext h3 i {
-              font-size:15vw;
-              font-weight:normal;
+            @media only screen and (max-width:809px) {
+              .videotext h3 i {
+                font-size:15vw;
+                font-weight:normal;
+              }
+              .video-bg {
+                height:100vw;
+              }
             }
-            .video-bg {
-              height:100vw;
-            }
-          }
-          @media only screen and (max-width:767px) {
-            .video-bg {
-              max-height:100vw;
-              top: 1990px;
-            }
-          }
+              @media only screen and (max-width:767px) {
+                .video-bg {
+                  max-height:100vw;
+                }
+              }
 
 
 
@@ -1071,12 +1110,11 @@ p.copyright {
     height:90px;
     position:relative;
   }
-  @media only screen and (max-width:767px) {
-    .contact-bg {
-      max-height:100vw;
-      top:2347px;
+    @media only screen and (max-width:767px) {
+      .contact-bg {
+        max-height:100vw;
+      }
     }
-  }
 
 
 
@@ -1111,30 +1149,30 @@ p.copyright {
   bottom:10vw;
 }
 
-@media only screen and (max-width:1279px) {
-  .twobuttonbox {
-    bottom: 12vw;
+  @media only screen and (max-width:1279px) {
+    .twobuttonbox {
+      bottom: 12vw;
+    }
   }
-}
-@media only screen and (max-width:1023px) {
-  .twobuttonbox {
-    min-width:auto;
-    flex-direction:column;
-    min-height:26vw;
-    row-gap: 4vw;
-    bottom:8vw;
-  }
-}
-@media only screen and (max-width:833px) {
-  .twobuttonbox {
-    bottom: 10vw;
-  }
-}
-@media only screen and (max-width:809px) {
-  .twobuttonbox {
-    bottom: 15vw;
-  }
-}
+    @media only screen and (max-width:1023px) {
+      .twobuttonbox {
+        min-width:auto;
+        flex-direction:column;
+        min-height:26vw;
+        row-gap: 4vw;
+        bottom:8vw;
+      }
+    }
+      @media only screen and (max-width:833px) {
+        .twobuttonbox {
+          bottom: 10vw;
+        }
+      }
+        @media only screen and (max-width:809px) {
+          .twobuttonbox {
+            bottom: 15vw;
+          }
+        }
 
 
 .button {
@@ -1167,10 +1205,10 @@ p.copyright {
     width: 100px;
     height: 100px;
   }
-  @keyframes slidein {
-    from {left: 0px;}
-    to {left: 50px;}
-  }
+    @keyframes slidein {
+      from {left: 0px;}
+      to {left: 50px;}
+    }
 
 .ostbutton {
   background-image: linear-gradient(rgb(90, 0, 90),rgb(184, 17, 17)); 
@@ -1189,19 +1227,19 @@ p.copyright {
     color: white;
     box-shadow: 1px 1px 25px black;
   }
-  @media only screen and (max-width:1279px) {
-    .ostbutton {
-      bottom: 50px;
-      justify-self: start;
+    @media only screen and (max-width:1279px) {
+      .ostbutton {
+        bottom: 50px;
+        justify-self: start;
+      }
     }
-  }
-  @media only screen and (max-width:809px) {
-    .ostbutton {
-      height:18vw;
-      width:60vw;
-      bottom:10vw;
-    }
-  }
+      @media only screen and (max-width:809px) {
+        .ostbutton {
+          height:18vw;
+          width:60vw;
+          bottom:10vw;
+        }
+      }
 
 
 
@@ -1222,19 +1260,19 @@ p.copyright {
     color: white;
     box-shadow: 1px 1px 25px black;
   }
-  @media only screen and (max-width:1279px) {
-    .bandbutton {
-      bottom: 50px;
-      justify-self: end;
+    @media only screen and (max-width:1279px) {
+      .bandbutton {
+        bottom: 50px;
+        justify-self: end;
+      }
     }
-  }
-  @media only screen and (max-width:809px) {
-    .bandbutton {
-      height:18vw;
-      width:60vw;
-      bottom:10vw;
-    }
-  }
+      @media only screen and (max-width:809px) {
+        .bandbutton {
+          height:18vw;
+          width:60vw;
+          bottom:10vw;
+        }
+      }
 
 
 
@@ -1250,18 +1288,18 @@ p.copyright {
     position:absolute;
 	}
 
-  @media only screen and (max-width:1279px) {
-    .biobutton {
-      bottom: 50px;
+    @media only screen and (max-width:1279px) {
+      .biobutton {
+        bottom: 50px;
+      }
     }
-  }
-  @media only screen and (max-width:809px) {
-    .biobutton {
-      height:18vw;
-      width:60vw;
-      bottom:10vw;
-    }
-  }
+      @media only screen and (max-width:809px) {
+        .biobutton {
+          height:18vw;
+          width:60vw;
+          bottom:10vw;
+        }
+      }
 	.biobutton:hover {
 		background-image: url(https://images.pexels.com/photos/164821/pexels-photo-164821.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
 		background-size: 140%,140%;
@@ -1283,18 +1321,18 @@ p.copyright {
     position:absolute;
     bottom:0px;
 	}
-    @media only screen and (max-width:1279px) {
-      .videobutton {
-        bottom: 10vw;
+      @media only screen and (max-width:1279px) {
+        .videobutton {
+          bottom: 10vw;
+        }
       }
-    }
-    @media only screen and (max-width:809px) {
-      .videobutton {
-        height:18vw;
-        width:60vw;
-        bottom:10vw;
-      }
-    }
+        @media only screen and (max-width:809px) {
+          .videobutton {
+            height:18vw;
+            width:60vw;
+            bottom:10vw;
+          }
+        }
 	.videobutton:hover {
 		background-image: url(https://i.pinimg.com/564x/89/75/b0/8975b0011188e7754fff3f696b0ffcb8.jpg);
 		background-size: 140%,140%;
@@ -1317,25 +1355,30 @@ p.copyright {
     position: absolute;
     bottom:20%;
 	}
-  @media only screen and (max-width:809px) {
-    .contactbutton {
-      height:30vw;
-      width:70vw;
-      bottom:10vw;
-      font-size:7vw;
+    @media only screen and (max-width:809px) {
+      .contactbutton {
+        height:30vw;
+        width:70vw;
+        bottom:10vw;
+        font-size:7vw;
+      }
     }
-  }
-	.contactbutton:hover {
-		background-image: url(https://i.pinimg.com/originals/e3/3e/5d/e33e5de0c7c296a7072e9780fe1beaae.jpg);
-		background-position: 50% 53%;
-		background-size: 190%,190%;
-	}
-  .fa i {
-    display:auto;
-    align-self:center;
-    justify-self:none;
-  }
+      .contactbutton:hover {
+        background-image: url(https://i.pinimg.com/originals/e3/3e/5d/e33e5de0c7c296a7072e9780fe1beaae.jpg);
+        background-position: 50% 53%;
+        background-size: 190%,190%;
+      }
+        .fa i {
+          display:auto;
+          align-self:center;
+          justify-self:none;
+        }
+          @media only screen and (max-width:438px) {
+            .button {
+              font-size:1rem;
+            }
 
+    }
 
 /* Contact Page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
