@@ -608,7 +608,8 @@ main {
   display:grid;
   position: relative;
   justify-content:space-evenly;
-  top:0px;
+  top:95px;
+  height:344px;
   grid-template-rows: 80px 80px 80px 80px / auto;
   grid-template-columns:1fr;
   grid-gap:8px;
@@ -700,7 +701,7 @@ main {
     transform: rotate(-4deg);
     z-index:90;
     position:absolute;
-    left:36px;
+    left:50px;
   }
 
   @media only screen and (max-width:767px) {
