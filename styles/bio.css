@@ -1,0 +1,121 @@
+/* Bio Page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.biopage {
+    position:relative;
+    justify-items: center;
+    align-items: center;
+    top:100px;
+    max-width:100vw;
+    width:100%;
+    height:100%;
+    min-height:1500px;
+    max-height:100%;
+    background-image:url(/myimages/Autumn\ hills.jpg);
+    background-color:rgba(0, 0, 0, 0.459);
+    background-blend-mode:saturation;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-attachment:fixed;
+    background-position:center;
+    box-sizing: border-box;
+    color:white;
+  }
+  .biocontent-wrap, .biocontent-wrap section.biosection {
+    min-height:1800px;
+    max-height:none;
+    height:100%; 
+  }
+  .biotitle {
+    grid-area:biotitle;
+    top:50px;
+    position:relative;
+    box-sizing: inherit;
+    justify-self: center;
+    align-self: end;
+    width:100%;
+  }
+  
+  .biotitle h1 {
+    color:white;
+    font-weight:normal;
+    font-size: 7.3rem;
+    margin:0;
+  }
+  
+  .biopage-wrap {
+    position:relative;
+    top:auto;
+    background-color:rgba(0, 0, 0, 0.589);
+    height:100%;
+    width:96%;
+    padding:50px 2% 120px 2%;
+  }
+  
+  .biocolumn-paragraph {
+    position:relative;
+    width:100%;
+    max-width:1080px;
+    margin:auto;
+    font-size: 1.2rem;
+    text-align: left;
+    font-family: "Gilroy Light", sans-serif;
+    margin:auto;
+  }
+  .biopage-pictures {
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-start;
+    padding:0px 0px;
+    box-sizing:border-box;
+    width: 100%;
+    max-width:1080px;
+  }
+    .biopic {
+      max-width:320px;
+      margin:auto 2em;
+    }
+    img.left {
+        float:left;
+    }
+    img.right {
+        float:right;
+    }
+    span {
+        clear:both;
+        display:block;
+        height:1em;
+    }
+
+details {
+    clear:both;
+}
+summary {
+    cursor:pointer;
+}
+
+.imgRow {
+    height:200px;
+    width:auto;
+    margin:0;
+}
+
+@media only screen and (max-width:1023px) {
+  .biotitle h1 {
+    font-size:calc(24px + 7vw);
+  }
+  .biocolumn-paragraph img {
+    float:none;
+  }
+  .biopage-wrap {
+    height:auto;
+  }
+}
+@media only screen and (max-width:500px) {
+  img.biopic {
+    width:100%;
+    max-width:100%;
+    margin:0 0;
+  }
+  .divider {
+    margin:0px auto;
+  }
+}
