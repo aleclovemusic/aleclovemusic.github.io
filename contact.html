@@ -4,87 +4,117 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/favicon_io/site.webmanifest">
     <title>CONTACT | AlecLove.com</title>
     
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/contact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <div class="page-container" id="page-container">
-        <div class="content-wrap" id="content-wrap">
-            <header class="top-bar">
-                <!-- Navbar Section-->
-                <nav class="topnav" id="myTopnav">
-                    <div class="navbar__container">
-                        <div class="dropdown">
-                            <button onclick="myPortfolio()" class="dropbtn">PORTFOLIO</button>
-                            <div id="myDropdown" class="dropdown-content">
-                            <a href="ost.html">Original Soundtracks</a>
-                            <a href="bandorchestra.html">Band & Orchestra</a>
-                            </div>
+        <header class="navigation-header">
+            <a href="/index.html" id="headerIcon" title="Return to Home"><img src="/myimages/signature.png" alt="Logo"></a>
+            <div class="navigation-wrap" id="myTopnav">
+                <nav role="navigation" class="navigation-items w-nav-menu">
+                    <div class="dropdown w-nav-link">
+                        <button onclick="portfolioMenu()" id="dropdownPortfolioButton" class="dropbtn navigation-item w-nav-link">Portfolio</button>
+                        <div id="ptfDropdown"class="dropdown-content">
+                            <a href="/portfolio/filmost.html" class="w-nav-droplink">Film Soundtracks</a>
+                            <a href="/portfolio/gameost.html" class="w-nav-droplink">Game Soundtracks</a>
+                            <a href="/portfolio/classical.html" class="w-nav-droplink">Classical</a>
+                            <a href="/portfolio/other.html" class="w-nav-droplink">Other Compositions</a>
                         </div>
-                        <a href="videos.html">VIDEOS</a>
-                        <a href="index.html">HOME</a>
-                        <a href="bio.html">BIOGRAPHY</a>
-                        <a href="contact.html" class="active">CONTACT</a>
-                        
                     </div>
-                    <div class="burger">                            
-                        <a href="javascript:void(0);" class="icon">
-                        <i class="fa fa-bars"></i>
-                        </a>
+                    <div class="dropdown w-nav-link">
+                        <button onclick="projectsMenu()" id="dropdownProjectsButton" class="dropbtn navigation-item w-nav-link">
+                            Projects</button> <!-- NavItem - Projects-->
+                        <div id="projectsDropdown"class="dropdown-content"> 
+                            <a href="/projects/competitions.html" class="w-nav-droplink">Competition Entries</a>
+                            <a href="/projects/samples.html" class="w-nav-droplink">Sample Libraries</a>
+                        </div>
                     </div>
-                    <div class="burgermenu">
-                        <ul class="burgermenu-content">
-                            <p></p>
-                            <li class="menu-home"><a href="index.html">HOME</a></li>
-                            <li>
-                                <button onclick="burgerPtfdrop()" class="burger-ptfbutton">PORTFOLIO</button>
-                                <div id="burgerPtfdrop"class="burger-ptfdrop">
-                                    <ul>
-                                        <li><a href="ost.html">Original Soundtracks</a></li>
-                                        <li><a href="bandorchestra.html">Band & Orchestra</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li><a href="videos.html">VIDEOS</a></li>
-                            <li><a href="bio.html">BIOGRAPHY</a></li>
-                            <li><a href="contact.html">CONTACT</a></li>
-                            <li><a href="https://www.youtube.com/channel/UC8uxqhi3nswNYe7zTncA8BA" class="fa fa-youtube" alt="Youtube-icon" text-align="right"></a></li>
-                            <li><a href="https://www.instagram.com/aleclove.music/" class="fa fa-instagram" alt="Instagram-icon"></a></li>
-                            <li><a href="https://soundcloud.com/alec-kunkel-759768807" class="fa fa-soundcloud" alt="Soundcloud-icon"></a></li>
-                            <li><a href="https://aleclove.bandcamp.com/" class="fa fa-bandcamp" alt="Bandcamp-icon"></a></li>
-                        </ul>
-                    </div>     
+                    <a href="/index.html" class="navigation-item w-nav-link ">Home</a>
+                    <div class="dropdown w-nav-link">
+                        <button onclick="aboutMenu()" id="dropdownAboutButton" class="dropbtn navigation-item w-nav-link">About</button>
+                        <div id="aboutDropdown" class="dropdown-content">
+                            <a href="/about/bio.html" class="w-nav-droplink">Biography</a>
+                            <a href="/about/blog.html" class="w-nav-droplink">Blog</a>
+                            <a href="/about/discog.html" class="w-nav-droplink">Discography</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="navigation-item w-nav-link active">Contact</a>
                 </nav>
-            </header>
-
-            <main>
+                <div class="burger" onclick="toggleBurgerAnimation()" id="burgerIcon">                            
+                    <a href="javascript:void(0);" class="icon">
+                        <div class="bar" id="bar1"></div>
+                        <div class="bar" id="bar2"></div>
+                        <div class="bar" id="bar3"></div>
+                      </a>
+                </div>
+                <div class="burgermenu" id="burgerMenu">
+                    <ul class="burgermenu-content">
+                        <p></p>
+                        <li class="menu-home"><a href="/index.html">Home</a></li>
+                        <li>
+                            <button onclick="burgerPtfdrop()" class="burger-ptfbutton">Portfolio</button>
+                            <div id="burgerPtfdrop"class="burger-ptfdrop">
+                                <ul>
+                                    <li><a href="/portfolio/filmost.html">Film Soundtracks</a></li>
+                                    <li><a href="/portfolio/gameost.html">Game Soundtracks</a></li>
+                                    <li><a href="/portfolio/classical.html">Classical</a></li>
+                                    <li><a href="/portfolio/other.html">Other Compositions</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <button onclick="burgerProjectsdrop()" class="burger-projectsbutton">Projects</button>
+                            <div id="burgerProjectsdrop"class="burger-projectsdrop">
+                                <ul>
+                                    <li><a href="/projects/competitions.html">Competition Entries</a></li>
+                                    <li><a href="/projects/samples.html">Sample Libraries</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <button onclick="burgerAboutdrop()" class="burger-aboutbutton">About</button>
+                            <div id="burgerAboutdrop" class="burger-aboutdrop">
+                                <ul>
+                                    <li><a href="/about/bio.html">Biography</a></li>
+                                    <li><a href="/about/blog.html">Blog</a></li>
+                                    <li><a href="/about/discog.html">Discography</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="/contact.html">Contact</a></li>
+                    </ul>
+                </div> 
+            </div>
+        </header>
+        <section id="contactFormSection">
                 <div class="contact-page">
                     <div class="contact-title" id="contact-title" data-testid="richTextElement">
                         <h2>Contact Me</h2>
                     </div>
                     <div class="divider"><span></span><span>.</span><span></span></div>
                     <div class="contact-container">
-                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdVdkx5ydzrwXUAviF3QX7A-foWyVSxVI6rAiE0xUbDLwfjxA/viewform?embedded=true" width="640" height="1000px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                        <iframe id="contactForm" src="https://docs.google.com/forms/d/e/1FAIpQLSdVdkx5ydzrwXUAviF3QX7A-foWyVSxVI6rAiE0xUbDLwfjxA/viewform?embedded=true" width="640" height="1000px" frameborder="0" marginheight="0" marginwidth="0" >Loading…</iframe>
                     </div>
-                        
-                    <div class="social-icons"> Follow me on:
-                        <p>
-                            <a href="https://www.youtube.com/channel/UC8uxqhi3nswNYe7zTncA8BA" class="fa fa-youtube" alt="Youtube-icon"></a>
-                            <a href="https://www.instagram.com/aleclove.music/" class="fa fa-instagram" alt="Instagram-icon"></a>
-                            <a href="https://soundcloud.com/alec-kunkel-759768807" class="fa fa-soundcloud" alt="Soundcloud-icon"></a>
-                            <a href="https://aleclove.bandcamp.com/" class="fa fa-bandcamp" alt="Bandcamp-icon"></a>
-                        </p>
+                    <div class="w-layout-hflex flex-block">
+                        <a href="https://www.youtube.com/channel/UC8uxqhi3nswNYe7zTncA8BA" class="fa fa-youtube" alt="Youtube-icon" text-align="right"></a>
+                        <a href="https://www.instagram.com/aleclove.music/" class="fa fa-instagram" alt="Instagram-icon"></a>
+                        <a href="https://soundcloud.com/alec-kunkel-759768807" class="fa fa-soundcloud" alt="Soundcloud-icon"></a>
+                        <a href="https://aleclove.bandcamp.com/" class="fa fa-bandcamp" alt="Bandcamp-icon"></a>
+                        <a href="https://open.spotify.com/artist/0595P9WpDBJaqTL9jWhdE2?si=9no2lNLYQkODH52rBL8xZw" class="fa fa-spotify" alt="Spotify-icon"></a>
                     </div>
-                    <div id="footer">
-                        <p class="copyright" text-align="center">Copyright &copy; 2022 Alec Love</p>
-                    </div>
+
                 </div>
-
-            </main>
-
+            </section>
+            <div class="footer_copyright">
+                <p>&copy; 2024 Alec Love</p>
+            </div>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
             <script src="https://kit.fontawesome.com/7afaf64a99.js" crossorigin="anonymous"></script>
             <script src="app.js"></script>
@@ -94,8 +124,6 @@
             <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
             <script type="text/javascript" src="slick/slick.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-        </div>
-    </div>
 
 </body>
 
