@@ -1,0 +1,780 @@
+
+
+/* Banner */
+    .home-banner {
+        background-color: #010101;
+        margin: 0px;
+        display: block;
+        width:100%;
+        z-index: -1;
+    }
+
+    .home-banner-wrap {
+      display: block;
+      width:auto;
+      max-width: -moz-fit-content;
+      max-width: fit-content;
+      margin: 0 auto;
+    }
+
+    .home-banner-content {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "image intro"
+        ;
+        opacity: 1;
+        background-image:linear-gradient(to right, #fff 23%, #000 66%);
+        margin: 0 auto;
+    }
+    .home-banner-gridarea {
+        max-height: 600px;
+        height: 55vh; /* Note: this controls height */
+        width:100%;
+    }
+
+    .home-banner-gridarea.bannerimg {
+      grid-area: image;
+      margin-left:auto;
+    }
+
+    .home-banner-img {
+      width:auto;
+      height:100%;
+      object-fit: fill;
+      aspect-ratio: 1 / 1;
+      border-right: 2px solid #fff;
+      margin-left:auto;
+      order:-1;
+  }
+
+    .home-banner-gridarea.bannerintro {
+      grid-area: intro;
+      height:100%;
+      display: flex;
+    }
+
+    .intro-wrap {
+      height:100%;
+      display: flex;
+      flex-direction: column;
+        justify-content:center;
+        padding-left:100px;
+    }
+
+    .intro-text-block {
+        width:100%;
+        max-width:300px;
+        min-width:200px;
+    }
+
+    .name-text {
+        color:#fff;
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 34px;
+    }
+
+    .flex-block {
+        display:flex;
+        max-width:400px;
+        width: auto;
+        justify-content: space-between;
+        margin: 0px auto;
+        height:80px;
+        padding: 0px calc(10px + 4vw);
+    }
+
+    .flex-block a {
+        font-size: 42px;
+    }
+    .flex-block a.fa:hover {
+      font-size: 44px;
+    }
+
+
+    
+      /* Responsive design */
+      @media only screen and (max-width:970px) {
+        .intro-wrap {
+          padding-left:8vw;
+        }
+      }
+      @media only screen and (max-width:767px) {
+        .home-banner-wrap {
+          margin: 0;
+          max-width: 100vw;
+        }
+        .home-banner-content {
+          display:flex;
+          flex-direction:row-reverse;
+          background-image:none;
+          position:relative;
+        }
+        .home-banner-gridarea {
+          height: 80vw; /* Note: this controls height */
+          width:100%;
+        }
+        .home-banner-gridarea.bannerimg {
+          position:relative;
+          z-index:0;
+          width:auto;
+          height:40vh;
+        }
+        .home-banner-img {
+          border:none;
+        }
+        .home-banner-gridarea.bannerintro {
+          position:absolute;
+          height: auto;
+          
+          bottom:20%;
+          z-index:3;
+        }
+        .intro-wrap {
+          margin-left: 10%;
+        }
+      }
+      @media only screen and (max-width:600px) {
+        .flex-block a {
+          font-size: calc(24px + 3vw);
+        }
+      }
+      @media only screen and (max-width:300px) {
+        .intro-wrap {
+          margin-left: 0px;
+          max-width: 90vw;
+          box-sizing: content-box;
+        }
+      }
+
+/* Sections */
+
+section.home-section {
+  padding:60px;
+  background-image:linear-gradient(60deg, #050505 0%, #191919 25%, #262626 50%, #191919 75%, #050505 100% );
+}
+@media only screen and (max-width:767px) {
+  section.home-section {
+    padding:60px 20px;
+  }
+}
+
+.section-wrap--two-column {
+    max-width:1196px;
+    width:100%;
+    margin: 0 auto;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.section-wrap--three-column {
+    max-width:1196px;
+    width:100%;
+    margin: 0 auto;
+    display:grid;
+    columns: 3;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.section-wrap--flexbox {
+    max-width:1196px;
+    width:100%;
+    margin: 0 auto;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items:left;
+    justify-content: center;
+}
+
+.section-menu {
+  width:100%;
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+}
+
+.section-button {
+  background-color: transparent;
+  width:auto;
+  margin: 0;
+  padding: 0.3rem 2rem;
+  cursor: pointer;
+}
+
+li.section-menu-item {
+  text-align:left;
+  color: white;
+  text-decoration:none;
+  display:block;
+  border: 1px solid transparent;
+  font-size: calc(12px + 0.8vw);
+}
+
+
+@media only screen and (min-width:767px) {
+  ul.section-menu {
+    border-left: 1px solid white;
+  }
+  li.section-menu-item {
+    transition: color 0.3s, font-size 0.5s, border 0.5s;
+  }
+  li.section-menu-item:hover,
+  li.section-menu-item:focus {
+    border-color:white;
+    color: var(--red);
+    font-size: calc(12px + 0.8vw);
+    text-shadow: rgba(255, 255, 255, 0.3) 0px 0 30px;
+  }
+}
+@media only screen and (max-width:767px) {
+  li.section-menu-item:hover,
+  li.section-menu-item:focus {
+    border:none;
+  }
+}
+
+@media only screen and (max-width:500px) {
+  section.home-section {
+    padding:50px 10px;
+  }
+
+}
+
+ /* preview super menu */
+
+.previewmenu-wrap {
+  display: grid;
+  grid-template-columns: 300px 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto 1fr 1fr 1fr;
+}
+
+.h-btn-group {
+  grid-column: 2 / span 5; /* Span from column 2 to the last column */
+  grid-row: 1; /* Display in the first row */
+  display: flex; /* Display the buttons in a flex container */
+}
+
+.h-btn-group button {
+  padding: 10px 20px;
+  font-size: calc(12px + 0.8vw);
+  background-color: transparent;
+  color: white; /* White text */
+  cursor: pointer; /* Pointer/hand icon */
+  width: 100%; /* Set width to 100% for full width */
+  display: block; /* Make the buttons appear as block elements */
+  font-size: calc(12px + 0.8vw);
+  border: none;
+  transition: color 0.3s, font-size 0.5s, border 0.5s;
+}
+
+/* Add a background color on hover */
+.h-btn-group button:hover,
+.h-btn-group button:focus {
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  color: var(--red);
+  font-size: calc(14px + 0.8vw);
+  text-shadow: rgba(255, 255, 255, 0.3) 0px 0 30px;
+}
+
+.h-btn-group button {
+  border-bottom: 1px solid white;
+}
+
+.h-btn-group button:focus {
+  border-bottom: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .h-btn-group {
+    justify-content: center;
+  }
+  .h-btn-group button {
+    border: 1px solid white;
+    border-radius: 20px;
+    width: 100px;
+    margin: 0px 5px 10px 5px;
+  }
+  .h-btn-group button:hover,
+  .h-btn-group button:focus {
+    border: 1px solid white;
+  }
+
+}
+@media only screen and (max-width: 600px) {
+  .h-btn-group {
+    flex-wrap: wrap;
+  }
+}
+
+.music-player {
+  display: none; /* Initially hide the player */
+}
+
+
+.preview-menu li {
+  display:grid;
+  grid-template-columns: calc(15ch + 30px) auto;
+  grid-template-rows: auto;
+  padding: 0px 20px;
+  cursor: pointer;
+  /* display: flex;
+  align-items:center;
+  justify-content:space-between; */
+}
+.list-item-category {
+  margin: auto auto auto 0;
+}
+.list-item-title {
+  display: inline-block;
+}
+.list-item-icon  {
+  height:1.2em;
+  display:inline-block;
+}
+
+/* Add the following CSS rules for animation */
+
+.preview-container {
+  grid-template-columns: 1fr 2fr;
+  column-gap: none;
+  background-color: #333333;
+  text-align: center;
+  overflow: hidden; /* Hide overflow to make the animation smoother */
+  max-height: 0; /* Start with height as 0 to hide initially */
+  transition: max-height 1s ease; /* Set the transition property */
+  width:100%;
+}
+
+.preview-button {
+  background-color: transparent;
+  width:auto;
+  margin: 0 auto 1em auto;
+  padding: 0.3rem 2rem;
+  border-radius:20px;
+}
+
+.show-preview {
+  display: grid;
+  max-height: 150px; /* When the preview is shown, set height to auto to reveal content */
+}
+
+.preview-list {
+  width:100%;
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+  max-width:320px;
+}
+
+.section-list-item {
+    text-align:left;
+    border: 1px solid transparent;
+    color: white;
+    text-decoration:none;
+    transition: color 0.3s, font-size 0.5s, text-shadow 0.5s;
+    font-size: calc(12px + 0.8vw);
+    display:block;
+    cursor: pointer;
+}
+
+li.section-list-item:hover {
+  border-color:white;
+  color: var(--red);
+  font-size: calc(12px + 0.8vw);
+  text-shadow: rgba(255, 255, 255, 0.3) 0px 0 30px;
+}
+
+@media only screen and (max-width:767px) {
+  .section-menu {
+    display:flex;
+    flex-direction: column;
+    margin: 0;
+  }
+  li.section-menu-item {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-column: 1 / 3;
+  }
+  .list-item-title {
+    display:none;
+  }
+  .preview-menu li {
+    display:flex;
+  }
+}
+
+@media only screen and (max-width:500px) {
+  li.section-menu-item {
+    padding:0px;
+  }
+}
+/* Music players */
+
+.music-player {
+  background-color: #333;
+  border-radius: 10px;
+  box-shadow: -12px 12px 24px #0000009d, 6px -6px 12px #ffffff0c;
+  /* height:100%; */
+  display: block;
+}
+
+.hidden {
+  max-height: 0px;
+}
+
+.audio-container {
+  display:grid;
+  grid-template-rows:auto auto;
+  background-color: #333;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 100%;
+}
+
+.custom-controls {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto;
+  grid-template-areas: 
+  "audioBasic songInfo volumeControl"
+  ;
+  align-items: center;
+  /* padding: 10px; */
+}
+
+#playPauseBtn, #volumeControl, #currentTime, #duration {
+  color: #fff;
+  margin: 0 5px;
+}
+
+#volumeControl, #timeIndicator {
+  background-color: #2c2c2c;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+}
+#playPauseBtn {
+  background-color: transparent;
+  border: none;
+}
+#volumeControl {
+  grid-area: volumeControl;
+  justify-self: flex-end;
+}
+
+#playPauseBtn, #volumeControl {
+  cursor: pointer;
+}
+#audioBasicFunctions{
+  grid-area: audioBasic;
+  justify-self: flex-start;
+  display: flex;
+  flex-direction:row;
+  flex-wrap: nowrap;
+  font-size:medium;
+}
+
+#audioBasicFunctions, #volumeControl {
+  align-self:flex-end;
+}
+
+#volumeControl:hover {
+  background-color: #4c4c4c;
+}
+
+#progressBarContainer {
+  width: 100%;
+  height: 10px;
+  background-color: #2c2c2c;
+  position: relative;
+  margin-top: 10px;
+}
+
+#progressIndicator {
+  height: 100%;
+  background-color: var(--red);
+  position: relative;
+  width: 0;
+}
+
+.play {
+  width: 34px;
+  height: 34px;
+  position: relative;
+  top:12px;
+}
+
+.play:before,
+.play:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  top:5px;
+  border-style: solid;
+  border-color: transparent;
+  border-left-color: #fff;
+  transition: 0.1s;
+}
+
+.play:before {
+  left: 0;
+  top: 0;
+  height: 10px;
+  border-width: 5px 10px 5px 10px;
+}
+
+.play:after {
+  left: 10px;
+  top: 5px;
+  height: 0;
+  border-width: 5px 0 5px 10px;
+}
+
+.play.paused:before {
+  height: 20px;
+  border-width: 0 0 0 6.67px;
+}
+
+.play.paused:after {
+  left: 13.33px;
+  top: 0;
+  height: 20px;
+  border-width: 0 0 0 6.67px;
+}
+
+.song-info {
+  grid-area:songInfo;
+  /* padding: 10px; */
+  text-align: center;
+}
+
+@media only screen and (max-width:767px) {
+  .custom-controls {
+    max-width:96.5vw;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto 30px;
+    grid-template-areas: 
+    "songInfo songInfo"
+    "audioBasic volumeControl"
+    ;
+  }
+}
+  @media only screen and (max-width:500px) {
+    .audio-container {
+      position: relative;
+      width:100%;
+    }
+    .custom-controls {
+      grid-template-rows: max-content auto;
+      grid-template-columns: max-content auto;
+      grid-template-areas: 
+      "songInfo volumeControl"
+      "audioBasic volumeControl"
+      ;
+      margin:0;
+      padding:0;
+    }
+    #audioBasicFunctions {
+      margin-left: 10px;
+      font-size: small;
+    }
+    #volumeControl {
+      transform: rotate(-90deg);
+      position:relative;
+      align-self: auto;
+      right:5px;
+      width: 100px;
+    }
+    #progressBarContainer {
+      width:93.5vw;
+    }
+  }
+
+.get-in-touch {
+  display: flex;
+  flex-direction:row;
+  justify-content: center;
+  align-items: center;
+  transform:translateX(16px);
+}
+  .cta-button {
+    width:auto;
+    font-size: calc(12px + 0.8vw);
+    margin: 0;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    display:inline-block;
+  }
+  
+  .glowing-btn {
+    position: relative;
+    color: white;
+    cursor: pointer;
+    padding: 0.35em 1em;
+    border: 0.1em solid var(--glow-color);
+    border-radius: 0.45em;
+    background: none;
+    perspective: 1.2em;
+  }
+  
+  .glowing-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.5;
+    filter: blur(0.8em);
+    transform: translateY(90%) rotateX(95deg) scale(1, 0.20);
+    background: var(--glow-color);
+    pointer-events: none;
+  }
+  
+  .glowing-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: -1;
+    background-color: var(--glow-color);
+    box-shadow: 0 0 2em 0.2em var(--glow-color);
+    transition: opacity 100ms linear;
+  }
+  
+  .glowing-btn:hover {
+    color: var(--red);
+    -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+    text-shadow: none;
+    animation: none;
+  }
+
+  .glowing-btn:hover:before {
+    filter: blur(1.1em);
+    opacity: 0.8;
+  }
+  
+  .glowing-btn:hover:after {
+    opacity: 0.1;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .glowing-btn{
+      font-size: 1em;
+    }
+  }
+  
+#ctaArrow {
+  opacity: 0;
+  width: 2em;
+  color: white;
+  transition: transform 0.5s, opacity 0.2s;
+  transform: translateX(0);
+}
+
+.get-in-touch a:hover + #ctaArrow,
+.section-menu-item a:hover + #ctaArrow {
+  transform: translateX(0.5em);
+  opacity:1;
+}
+
+.focused {
+  background-color:black;
+}
+
+.display-highlight {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s; /* Adjust the duration as needed */
+}
+
+.display-highlight:not(.hidden) {
+  max-height: auto; /* Adjust the value based on your content's maximum height */
+}
+
+.highlight-wrap {
+  background-color:#333;
+  box-sizing:border-box;
+  padding: 10px;
+}
+
+.news-context {
+    text-align: left;
+}
+.quote-author {
+    text-indent: 20px;
+    margin-bottom: 20px;
+}
+
+.career-headline-wrap {
+    grid-column: span 2;
+    text-align: left;
+    width:70%;
+    margin-bottom: 50px;
+    margin-right: 20px;
+}
+
+
+.works-flexbox {
+    column-gap: 30px;
+    row-gap: 30px;
+    display: flex;
+    flex-wrap:wrap;
+    grid-template:
+    ". . ."
+    ". . ."
+    / 1fr 1fr 1fr;
+    align-content: flex-start;
+    justify-content: space-around;
+    margin-bottom: 0;
+}
+
+
+  .recent-workbox {
+    display:inline-block;
+    width:260px;
+  }
+  
+  .recent-work img {
+    max-width:260px;
+    width:100%;
+    height: auto;
+    aspect-ratio: 2/3;
+  }
+
+  @media only screen and (max-width:767px) {
+    .career-headline-wrap {
+      width:100%;
+      grid-column: span 3;
+    }
+  }
+  @media only screen and (max-width:500px) {
+    .works-flexbox {
+      
+      display: block;
+      overflow:auto;
+      justify-content:flex-start;
+      white-space: nowrap;
+    }
+    .recent-workbox {
+      max-width:40vw;
+    }
+    .work-description {
+      display:none;
+    }
+  }

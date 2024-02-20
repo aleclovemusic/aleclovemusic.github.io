@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/favicon_io/site.webmanifest">
+    <title>HOME | AlecLove.com</title>
+    
+    <link rel="stylesheet" href="/styles/general.css">
+    <link rel="stylesheet" href="/styles/about.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="body">
+    <header class="navigation-header">
+        <a href="/index.html" id="headerIcon" title="Return to Home"><img src="/myimages/signature.png" alt="Logo"></a>
+        <div class="navigation-wrap" id="myTopnav">
+            <nav role="navigation" class="navigation-items w-nav-menu">
+                <div class="dropdown w-nav-link">
+                    <button onclick="portfolioMenu()" id="dropdownPortfolioButton" class="dropbtn navigation-item w-nav-link">Portfolio</button>
+                    <div id="ptfDropdown"class="dropdown-content">
+                        <a href="/portfolio/filmost.html" class="w-nav-droplink">Film Soundtracks</a>
+                        <a href="/portfolio/gameost.html" class="w-nav-droplink">Game Soundtracks</a>
+                        <a href="/portfolio/classical.html" class="w-nav-droplink">Classical</a>
+                        <a href="/portfolio/other.html" class="w-nav-droplink">Other Compositions</a>
+                    </div>
+                </div>
+                <div class="dropdown w-nav-link">
+                    <button onclick="projectsMenu()" id="dropdownProjectsButton" class="dropbtn navigation-item w-nav-link">
+                        Projects</button> <!-- NavItem - Projects-->
+                    <div id="projectsDropdown"class="dropdown-content"> 
+                        <a href="/projects/competitions.html" class="w-nav-droplink">Competition Entries</a>
+                        <a href="/projects/samples.html" class="w-nav-droplink">Sample Libraries</a>
+                    </div>
+                </div>
+                <a href="/index.html" class="navigation-item w-nav-link">Home</a>
+                <div class="dropdown w-nav-link">
+                    <button onclick="aboutMenu()" id="dropdownAboutButton" class="dropbtn navigation-item w-nav-link active">About</button>
+                    <div id="aboutDropdown" class="dropdown-content">
+                        <a href="/about/bio.html" class="w-nav-droplink">Biography</a>
+                        <a href="/about/blog.html" class="w-nav-droplink">Blog</a>
+                        <a href="/about/discog.html" class="w-nav-droplink">Discography</a>
+                    </div>
+                </div>
+                <a href="/contact.html" class="navigation-item w-nav-link">Contact</a>
+            </nav>
+            <div class="burger" onclick="toggleBurgerAnimation()" id="burgerIcon">                            
+                <a href="javascript:void(0);" class="icon">
+                    <div class="bar" id="bar1"></div>
+                    <div class="bar" id="bar2"></div>
+                    <div class="bar" id="bar3"></div>
+                </a>
+            </div>
+            <div class="burgermenu" id="burgerMenu">
+                <ul class="burgermenu-content">
+                    <p></p>
+                    <li class="menu-home"><a href="/index.html">Home</a></li>
+                    <li>
+                        <button onclick="burgerPtfdrop()" class="burger-ptfbutton">Portfolio</button>
+                        <div id="burgerPtfdrop"class="burger-ptfdrop">
+                            <ul>
+                                <li><a href="/portfolio/filmost.html">Film Soundtracks</a></li>
+                                <li><a href="/portfolio/gameost.html">Game Soundtracks</a></li>
+                                <li><a href="/portfolio/classical.html">Classical</a></li>
+                                <li><a href="/portfolio/other.html">Other Compositions</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <button onclick="burgerProjectsdrop()" class="burger-projectsbutton">Projects</button>
+                        <div id="burgerProjectsdrop"class="burger-projectsdrop">
+                            <ul>
+                                <li><a href="/projects/competitions.html">Competition Entries</a></li>
+                                <li><a href="/projects/samples.html">Sample Libraries</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <button onclick="burgerAboutdrop()" class="burger-aboutbutton">About</button>
+                        <div id="burgerAboutdrop" class="burger-aboutdrop">
+                            <ul>
+                                <li><a href="/about/bio.html">Biography</a></li>
+                                <li><a href="/about/blog.html">Blog</a></li>
+                                <li><a href="/about/discog.html">Discography</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+            </div>   
+        </div>
+    </header>
+<section class="bio-section">
+    <div class="biotitle" id="bioTitle" data-testid="richTextElement">
+        <h2>Autobiography</h2>
+    </div>
+    <div class="divider"><span></span><span>.</span><span></span></div>
+    <div class="bio-wrap">
+        <div class="bio-paragraphs">
+            <p>Thanks for visiting my website! I'm a student composer from the United States, based in Michigan. 
+                I'm working on my Bachelor of Music in Composition at Central Michigan University.</p>
+            <span></span>
+            <p>My musical journey started at the age of five, taking piano lessons for 7 years, then played percussion and jazz drumset 
+                in my hometown band program.
+                I was also a drummer and guitarist in several local cover bands that played shows around central Michigan.
+                My love for band led me to compose original music for my high school marching band, which sparked my 
+                interest in composing for instrumental ensembles. I also had a deep appreciation for music in movies and video games, 
+                and this set me on a path toward a career in film composition.</p>
+            <span></span>
+            <p></p>
+            <span></span>
+            <p>I'm currently making use of my Engineering/Physics Associate degree from Lansing Community College through
+                my employment as the Tech Lead in the Audio/Visual department at the Central Michigan University School of Music.</p>
+            <span></span>
+            <p></p>
+            <span></span>
+            <h3>My composing philosophy</h3>
+            <span></span>
+            <p></p>
+            <span></span>
+            <p class="bio-paragraphs">As a child, I developed a passion for stories that 
+                illuminate life's lessons and transport us to unfamiliar realms. <b>Music, a 
+                uniquely human art form, holds the power to convey emotion and foster a 
+                profound understanding. Allowing the audience to feel this connection to 
+                our stories fuels my creative passion for music.</b></p>
+        
+        
+            </div>
+</section>
+
+<div class="footer_copyright">
+    <p>&copy; 2024 Alec Love</p>
+  </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/7afaf64a99.js" crossorigin="anonymous"></script>
+    <script src="/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+</body>
+</html>

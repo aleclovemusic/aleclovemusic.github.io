@@ -1,0 +1,32 @@
+
+.competition-videos-grid {
+    grid-area:videobox;
+    position:relative;
+    top:0;
+    width: 100%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(20vw, 40vw));
+    justify-content:center;
+    box-sizing:border-box;
+    align-self:start;
+  }
+  .video_embed {
+    padding:5px;
+    max-width:100%;
+    height:inherit;
+    box-sizing:content-box;
+  }
+  .video_embed iframe {
+    max-width:560px;
+    width:100%;
+    aspect-ratio: 16 / 9;
+  } 
+
+  @media only screen and (max-width:500px) {
+    .competition-videos-grid {
+      grid-template-columns: 100vw;
+    }
+    .ost_embed iframe {
+      width:100%;
+    }
+  }

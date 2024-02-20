@@ -1,0 +1,205 @@
+
+.classical-banner {
+    position:relative;
+    top:0px;
+    /* The image used */
+  background-image: url("/myimages/The\ Hunter\ Recording\ Session.png");
+  /* Set a specific height */
+  height: 15vw;
+  width:100vw;
+  /* Create the parallax scrolling effect */
+  background-attachment:fixed;
+  background-position: 0px -30vw;
+  background-repeat: no-repeat;
+  background-size: 105vw, auto;
+  z-index:0;
+  text-align: center;
+  display:flex;
+  flex-direction:column;
+}
+.classical-banner-filter {
+    width:100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px);
+    text-align: center;
+    display:flex;
+    flex-direction:column;
+}
+
+.classical-banner-mobile {
+    display:none;
+}
+@media only screen and (max-width:600px) {
+    .classical-banner {
+        display:none;
+    }
+    .classical-banner-mobile {
+        display:block;
+    }
+}
+.classical-title {
+    position: relative;
+    margin: auto auto  0px auto;
+    padding-top:20px;
+}
+.classical-wrap {
+    max-width:1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction:row;
+}
+.classical-wrap-three {
+    display:grid;
+    grid-template-columns: auto auto auto;
+    max-width:1000px;
+    margin: 0 auto;
+    justify-items: center;
+}
+
+.classical-card {
+    height:300px;
+    width:25vw;
+    max-width:250px;
+    min-width:180px;
+    background-color:rgb(107, 107, 107);
+}
+
+a.card-filter {
+    width: 100%;
+    height: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    transition: backdrop-filter 0.2s, -webkit-backdrop-filter 0.2s;
+}
+
+a.card-filter:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-backdrop-filter: blur(0px);
+    backdrop-filter: blur(0px);
+}
+
+
+/* Filter Sidebar */
+#sidebar {
+    width: 20%;
+    background-color: transparent;
+    padding: 20px;
+}
+
+#sidebar h4 {
+    margin-bottom:20px;
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-left: 1px solid white;
+}
+
+#sidebar li {
+    margin-bottom: 10px;
+}
+
+#sidebar a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: calc(12px + 0.8vw);
+    display: block;
+    padding: 0.3rem 1.5rem;
+    cursor: pointer;
+    text-align: left;
+    border: 1px solid transparent;
+    transition: color 0.3s, font-size 0.5s, border 0.5s;
+}
+
+#sidebar a:hover,
+#sidebar a:focus {
+    border-color: var(--white);
+    color: var(--red); /* Replace with your desired color */
+    font-size: calc(12px + 0.8vw);
+    text-shadow: rgba(255, 0, 0, 0.3) 0px 0 30px;
+}
+
+#music-list {
+    width: 75%;
+    padding: 20px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 100%));
+}
+
+.music-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    color:white;
+    display:grid;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-columns: auto;
+    text-align:left;
+}
+
+strong.piece-title {
+    margin-top:10px;
+}
+
+.music-item p {
+    display:auto;
+}
+
+a.purchase {
+    border: 1px solid white;
+    padding:3px 15px;
+    border-radius:20px;
+}
+
+a.purchase:hover {
+    background-color: #333;
+}
+
+
+@media only screen and (max-width:600px) {
+    .classical-wrap {
+        flex-direction: column;
+    }
+    .classical-title {
+        padding-top:0px;
+    }
+    #sidebar {
+        box-sizing: border-box;
+        width:100%;
+        padding: 5px 10px;
+    }
+    #sidebar h4 {
+        margin-bottom:10px;
+    }
+    #sidebar ul {
+        display:flex;
+        flex-direction: row;
+        flex-wrap:wrap;
+        border-left: none;
+    }
+    #sidebar li {
+        border:  1px solid white;
+        border-radius:20px;
+        margin-right:10px;
+    }
+    #music-list {
+        width: auto;
+        padding: 20px 0;
+    }
+    .music-item {
+        width:100vw;
+        box-sizing:border-box;
+    }
+    audio {
+        max-width:90vw;
+    }
+
+}

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/favicon_io/site.webmanifest">
+    <title>HOME | AlecLove.com</title>
+    
+    <link rel="stylesheet" href="/styles/general.css">
+    <link rel="stylesheet" href="/styles/blog.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="body">
+    <header class="navigation-header">
+        <a href="/index.html" id="headerIcon" title="Return to Home"><img src="/myimages/signature.png" alt="Logo"></a>
+        <div class="navigation-wrap" id="myTopnav">
+            <nav role="navigation" class="navigation-items w-nav-menu">
+                <div class="dropdown w-nav-link">
+                    <button onclick="portfolioMenu()" id="dropdownPortfolioButton" class="dropbtn navigation-item w-nav-link">Portfolio</button>
+                    <div id="ptfDropdown"class="dropdown-content">
+                        <a href="/portfolio/filmost.html" class="w-nav-droplink">Film Soundtracks</a>
+                        <a href="/portfolio/gameost.html" class="w-nav-droplink">Game Soundtracks</a>
+                        <a href="/portfolio/classical.html" class="w-nav-droplink">Classical</a>
+                        <a href="/portfolio/other.html" class="w-nav-droplink">Other Compositions</a>
+                    </div>
+                </div>
+                <div class="dropdown w-nav-link">
+                    <button onclick="projectsMenu()" id="dropdownProjectsButton" class="dropbtn navigation-item w-nav-link">
+                        Projects</button> <!-- NavItem - Projects-->
+                    <div id="projectsDropdown"class="dropdown-content"> 
+                        <a href="/projects/competitions.html" class="w-nav-droplink">Competition Entries</a>
+                        <a href="/projects/samples.html" class="w-nav-droplink">Sample Libraries</a>
+                    </div>
+                </div>
+                <a href="/index.html" class="navigation-item w-nav-link">Home</a>
+                <div class="dropdown w-nav-link">
+                    <button onclick="aboutMenu()" id="dropdownAboutButton" class="dropbtn navigation-item w-nav-link active">About</button>
+                    <div id="aboutDropdown" class="dropdown-content">
+                        <a href="/about/bio.html" class="w-nav-droplink">Biography</a>
+                        <a href="/about/blog.html" class="w-nav-droplink">Blog</a>
+                        <a href="/about/discog.html" class="w-nav-droplink">Discography</a>
+                    </div>
+                </div>
+                <a href="/contact.html" class="navigation-item w-nav-link">Contact</a>
+            </nav>
+            <div class="burger" onclick="toggleBurgerAnimation()" id="burgerIcon">                            
+                <a href="javascript:void(0);" class="icon">
+                    <div class="bar" id="bar1"></div>
+                    <div class="bar" id="bar2"></div>
+                    <div class="bar" id="bar3"></div>
+                </a>
+            </div>
+            <div class="burgermenu" id="burgerMenu">
+                <ul class="burgermenu-content">
+                    <p></p>
+                    <li class="menu-home"><a href="/index.html">Home</a></li>
+                    <li>
+                        <button onclick="burgerPtfdrop()" class="burger-ptfbutton">Portfolio</button>
+                        <div id="burgerPtfdrop"class="burger-ptfdrop">
+                            <ul>
+                                <li><a href="/portfolio/filmost.html">Film Soundtracks</a></li>
+                                <li><a href="/portfolio/gameost.html">Game Soundtracks</a></li>
+                                <li><a href="/portfolio/classical.html">Classical</a></li>
+                                <li><a href="/portfolio/other.html">Other Compositions</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <button onclick="burgerProjectsdrop()" class="burger-projectsbutton">Projects</button>
+                        <div id="burgerProjectsdrop"class="burger-projectsdrop">
+                            <ul>
+                                <li><a href="/projects/competitions.html">Competition Entries</a></li>
+                                <li><a href="/projects/samples.html">Sample Libraries</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <button onclick="burgerAboutdrop()" class="burger-aboutbutton">About</button>
+                        <div id="burgerAboutdrop" class="burger-aboutdrop">
+                            <ul>
+                                <li><a href="/about/bio.html">Biography</a></li>
+                                <li><a href="/about/blog.html">Blog</a></li>
+                                <li><a href="/about/discog.html">Discography</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+            </div>  
+        </div>
+    </header>
+    <section class="blog-section">
+        <div id="blogPageTitle">
+            <h2>Alec's Blog</h2>
+        </div>
+        <div class="divider"><span></span><span>.</span><span></span></div>
+    </section>
+    <section class="blog-section">
+        <div id="blog-container">
+            <article class="blog-post blog-recent" id="blogReverieShort">
+                <div class="blogpost-header">
+                    <h4 class="blogpost blogpost-title" id="blogReverieShort">Reverie Short</h4>
+                    <p class="paragraph-light blogpost blogpost-date">January 9, 2024</p>
+                </div>
+
+                <div class="blogpost-content">
+                    <img src="/myimages/ReverieShortThumbnail.jpg" alt="">
+                    <a class="blogpost" href="https://www.youtube.com/watch?v=eKRG42P9K9Q&t=1s" target="_blank">Watch the film here</a>
+                    <p class="blogpost ">I had the pleasure to work on this short film, not only as the soundtrack composer, but also as the sound mixer and sound editor.</p>
+                    <details>
+                        <summary class="blogpost">Read More</summary>
+                        <p class="blogpost ">
+                            The editing of the project itself took much longer than expected despite 
+                            shooting the entire film in less than 24 hours. This was in part due
+                            to some solo travelling I did during the summer of 2023, and also because
+                            I had a fall semester of on-campus classes that took me away from my home studio. 
+                            During mid-August, before the start of the semester, I visited Jackbox
+                            Games' studio in Chicago, and Nate Sandberg was kind enough to give me a tour
+                            of the building, making note of the voice-over booths where they recorded the fart
+                            sounds that were used in the game. At the time they were on track to complete
+                            Party Pack 10 in the coming months, and I had quite a bit of fun meeting the crew,
+                            which is a group of lovely, passionate people and the atmosphere was very welcoming.
+                            <img src="" alt="">
+                            The following morning, I drove to Indianapolis to watch
+                            the Drum Corps International Semifinals. One of my percussion friends from college played in the
+                            Madison Scouts that year. Tried my best to experience nightlife in the big cities but
+                            in the attempt to spare my bank account, there was a lot more walking than there were 
+                            cocktails, but overall the experience was a positive one.
+                            <img src="" alt="">
+                            As the semester quickly began ramping up, I had significantly more duties on the job 
+                            as the A/V junior tech lead at the CMU School of Music. Can't share too many details
+                            on that front, but I was grateful to be around people who support me and care about my
+                            well being, I'm convinced I would have been in a much worse state at the end of the
+                            semester, if not for them.
+                            <img src="" alt="">
+                            After the end of the semester I resumed my work on the sound, music, foley, and SFX
+                            for Reverie with few interruptions, and it was at this time that I was able to get 
+                            my hands on the Sennheiser HD 599 open-back headphones (which Sennheiser's reputation
+                            precedes them, as they are one of the best companies for showing how poorly-mixed 
+                            your audio is), the new cans really helped out immensely. The Reverie short was
+                            released before I was able to hear how the TV (which was added in-post) audio integrated 
+                            with the mix, but the YouTube version of the short film out there as a proof-of-concept 
+                            for the eventual feature film.
+                            There is an additional version that we will be sumbitting to competitions, which has 
+                            audio that I re-mixed after some timing changes. 
+                            Right now we are unsure if it is going to be 
+                            made available to the public. The feature-length Reverie, Alex Adam's capstone 
+                            project, will be filmed this summer! I will be the designated audio supervisor
+                            as well as the soundtrack composer, and I couldn't be more excited. However,
+                            do need some help to fund this project and we would appreciate any contributions,
+                            no matter how small, to make this film a reality. Below is a link to the GoFundMe page:
+                            <a class="blogpost " href="https://www.gofundme.com/f/help-me-complete-my-capstone-film-reverie?utm_medium=copy_link_all&utm_source=customer&utm_campaign=p_cp%2Bshare-sheet">
+                                Fundraiser by Alex Adam: Help me complete my capstone film, Reverie
+                            </a>
+                        </p>
+                    </details>
+                    
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+    <div class="footer_copyright">
+        <p>&copy; 2024 Alec Love</p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/7afaf64a99.js" crossorigin="anonymous"></script>
+    <script src="/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+</body>
+</html>

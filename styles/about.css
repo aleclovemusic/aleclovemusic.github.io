@@ -1,0 +1,12 @@
+.bio-wrap {
+    margin:0 auto;
+    text-align: left;
+    max-width:1200px;
+    width:100%;
+  }
+.bio-paragraphs {
+    margin: auto 20px;
+}
+.bio-paragraphs p {
+    margin-bottom: 40px;
+}
