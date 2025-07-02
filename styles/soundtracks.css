@@ -8,6 +8,7 @@ section.soundtrack-section {
   white-space: nowrap;
   max-width:100vw;
   height:auto;
+  direction:rtl;
 }
 
 .soundtracks-flexbox::-webkit-scrollbar {

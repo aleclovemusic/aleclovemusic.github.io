@@ -12,6 +12,8 @@
     
     <link rel="stylesheet" href="/styles/general.css">
     <link rel="stylesheet" href="/styles/home.css">
+    <link rel="stylesheet" href="/styles/audio.css">
+    <link rel="stylesheet" href="/styles/samples.css">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -79,7 +81,6 @@
                             </ul>
                         </div>
                     </li>
-                    <li><a href="/projects.html">Projects</a></li>
                     <li>
                         <button onclick="burgerAboutdrop()" class="burger-aboutbutton">About</button>
                         <div id="burgerAboutdrop" class="burger-aboutdrop">
@@ -96,10 +97,76 @@
         </div>
     </header>
 <section>
-    <div class="under-development">
-        <h3>This page is under development.</h3>
-        <a href="/index.html">Return to Home</a>
+    <div class="w-layout-blockcontainer">
+        <h2>Sample Libraries</h2>
+        <div class="divider"><span></span><span>.</span><span></span></div>
     </div>
+    <div class="sample-library">
+        <div class="sample-library--image">
+            <img src="/myimages/Tibetan_Singing_Bowls_notext.png" id="tibetanSingingBowls" alt="">
+        </div>
+        <div class="w-layout-blockcontainer sample-library--description">
+            <p class="sample-library--summary">Introducing a set of seven beautiful and ornate Tibetan singing bowls, ideal for resonant, atmospheric textures and subtle rhythmic layers. Recorded in Chamichian Recital Hall at Central Michigan University.</p>
+            <h5 class="sample-library--presets">Presets</h5>
+            <p class="sample-library--presets"><b>Singing Bowls Keyboard: Tuned, equal-temperament pitches</b></p>
+            <p class="sample-library--presets"><b>Singing Bowls Original: Non-pitched, original microtonal frequencies</b></p>
+            <ul>
+                <li>5+ velocity layers</li>
+                <li>4 round robins</li>
+                <li>2 microphone positions</li>
+                <li>Soft hits, hard hits, and puja stick sustains</li>
+            </ul>
+        </div>
+        <div class="section-wrap--flexbox">
+            <div class="audioPlayerContainer music-player" id="">
+                <audio class="audioPlayer" preload="auto">
+                    <source src="/mymusic/Singing Bowls Demo.mp3" type="audio/mp3">
+                    Your browser does not support the audio tag.
+                </audio>
+                <button class="playPauseBtn circle">
+                    <img class="playPauseIcon" src="/icons/playbutton.png" alt="Play">
+                </button>
+                <div class="song-details">
+                    <p class="songTitle">Singing Bowls Demo</p>
+                </div>
+                <div class="timeduration">
+                    <span class="currentTime">0:00</span> <span>/</span> <span class="duration">0:00</span>
+                </div>
+                <input class="volumeControl" type="range" min="0" max="1" step="0.1" value="1">
+                <div class="progressContainer">
+                    <div class="progressIndicator"></div>
+                </div>
+            </div>
+        </div>
+        <div class="download-link--wrapper">
+            <a class="download-link" href="https://www.dropbox.com/scl/fi/i6rgi0za07rdgb3mw9803/Tibetan-Singing-Bowls.zip?rlkey=3cw96cryeks6y68z6hlrw93aw&dl=0" target="_blank">
+                Download Tibetan Singing Bowls (Dropbox)
+            </a>
+        </div>
+    </div>
+
+
+</section>
+<section>
+    <div class="w-layout-blockcontainer">    
+        <h4>Download Instructions</h4>
+        <p>In order to use this sample library, you need Decent Sampler by Decidedly</p>
+        <a href="https://www.decentsamples.com/product/decent-sampler-plugin/">
+                Get <b>Decent Sampler Plugin</b> FREE here
+        </a>
+        <ol style="color:white;">
+            <li>Download your sample library selection</li>
+            <li>Unzip the folder and move it to the location of your Decent Samples libraries</li>
+            <li>For most, this will be /AppData/Roaming/Decidedly/DecentSampler/Sample Libraries</li>
+            <li>Open the Decent Sampler Plugin in your DAW and locate the sample library under the File browser tab</li>
+        </ol>
+        <div class="divider"><span></span><span>.</span><span></span></div>
+
+        <p>These samples are free for anyone to use, so please consider <a href="https://coff.ee/aleclove" class="coffee">buying me a coffee!</a></p>
+        <p>License: Free for any use. Attribution is not required.</p>
+        
+    </div>
+
 </section>
 <div class="footer_copyright">
     <p>&copy; 2024 Alec Love</p>
@@ -107,6 +174,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/7afaf64a99.js" crossorigin="anonymous"></script>
     <script src="/app.js"></script>
+    <script src="/javascript/audioplayers.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

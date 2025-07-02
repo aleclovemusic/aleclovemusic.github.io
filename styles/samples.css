@@ -1,0 +1,95 @@
+#tibetanSingingBowls {
+    max-width:1440px;
+    width:100%;
+}
+ul {
+    color:white;
+}
+ol {
+    margin: auto 20px auto 30px;
+}
+p, li, a {
+    font-size: 1.1em;
+}
+li {
+    text-align:left;
+    text-wrap: wrap;
+    word-wrap: break-word;
+    list-style-position: inside;
+}
+a:hover {
+    color:dodgerblue;
+    text-decoration: underline;
+}
+.sample-library {
+    display: flex;
+    position:relative;
+    width:100%;
+    justify-content:center;
+    flex-direction: column;
+    overflow: hidden;
+}
+.sample-library--image {
+    display: flex;
+    width:100%;
+    justify-content:center;
+}
+.sample-library--summary {
+    margin: 30px auto;
+}
+.sample-library--description {
+    padding-right: 20px;
+    padding-left:20px;
+}
+.sample-library--description p, .sample-library li {
+    font-size: 1.25em;
+}
+.sample-library--description h5 {
+    text-decoration: underline;
+    margin-bottom: 5px;
+}
+.sample-library--presets {
+    text-align: left;
+}
+.download-link {
+    display:block;
+    font-size: 1.5em;
+    margin:50px 30px;
+    padding: 10px 30px;
+    outline: solid white 2px;
+    max-width: 300px;
+}
+.download-link--wrapper {
+    display: flex;
+    position:relative;
+    width:100%;
+    justify-content:center;
+}
+.audioPlayerContainer.music-player {
+    min-height:200px;
+    margin: 30px 30px 30px 30px;
+    width:auto;
+}
+
+@media only screen and (max-width: 600px) {
+    .audioPlayerContainer.music-player {
+        min-height:auto;
+    }
+    .sample-library--description p,
+    .sample-library li,
+    li, p, a {
+        font-size: 1em;
+    }
+    #tibetanSingingBowls {
+        position: relative;
+        display: block;
+        max-width:800px;
+        width:110%;
+        object-fit: cover;
+        overflow:hidden;
+    }
+    .sample-library--image {
+        display: block;
+        width:125%;
+    }
+}

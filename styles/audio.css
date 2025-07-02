@@ -110,6 +110,10 @@ span {
 @media only screen and (max-width:767px) {
     .songTitle {
         grid-column: 2 / 5;
+        padding-bottom: 5px;
+    }
+    .songSubtitle {
+        line-height: 1.1;
     }
 }
 @media (max-width: 600px) { 
@@ -123,4 +127,13 @@ span {
         padding: 15px;
         grid-template-rows: minmax(56px, 100%) auto auto;
     }
+}
+
+@media only screen and (max-width:500px) {
+    .songSubtitle {
+        font-size:1em;
+      }
+      .timeduration {
+        font-size:1.1em;
+      }
 }
