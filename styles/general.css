@@ -260,7 +260,6 @@ header.navigation-header {
   width: calc(50px + 8vw);
   left:30px;
   top:10px;
-  filter: invert(1);
 }
 
 .navigation-items {
