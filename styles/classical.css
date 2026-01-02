@@ -153,6 +153,62 @@ strong.piece-title {
     display:auto;
 }
 
+    .button-container {
+        width: 100%;
+        max-width: 400px;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+
+.purchase-redirect-btn {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffff;
+    background: #2a2a2a;
+    border: 1px solid #3a3a3a;
+    border-left: 3px solid var(--red);
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: background 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.purchase-redirect-btn:hover {
+    background: #333333;
+}
+
+.purchase-redirect-btn:active {
+    background: #242424;
+}
+
+@media (max-width: 768px) {
+    .button-container {
+       max-width: 320px;
+    }
+            
+    .purchase-redirect-btn {
+        padding: 0.875rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .button-container {
+        max-width: 200px;
+    }
+            
+    .purchase-redirect-btn {
+        font-size: 0.875rem;
+        padding: 0.75rem 1rem;
+    }
+}
+
 a.purchase {
     border: 1px solid white;
     padding:3px 15px;
