@@ -541,6 +541,7 @@ section {
    ============================================ */
 img {
     display: block;
+   color-gamut: srgb;
 }
 
 .video-container {
@@ -726,4 +727,5 @@ summary {
         margin: 0px auto 10px auto;
         padding: 0px;
     }
+
 }
