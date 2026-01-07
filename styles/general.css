@@ -542,6 +542,7 @@ section {
 img {
     display: block;
     image-rendering: auto;
+    contain: paint;
 }
 
 .video-container {

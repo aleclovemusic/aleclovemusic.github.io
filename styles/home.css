@@ -152,7 +152,7 @@
           position:absolute;
           background-image: url(/myimages/Alec\ Love\ Portrait\ HDR.jpeg);
           width:100%;
-          min-height: 100vh;
+          min-height: 100svh;
           top:-78px;
           background-attachment: fixed;
           background-position: center 20px;
