@@ -40,6 +40,9 @@
 
     .home-banner-img {
       width:auto;
+      will-change: auto;
+      transform: none;
+      filter: none;
       height:130%;
       object-fit:cover;
       aspect-ratio: 2 / 3;
